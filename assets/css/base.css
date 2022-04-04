@@ -76,7 +76,6 @@ body{
 
 .container {
     width: 100%;
-    /* max-width: 1170px; */
     max-width: 1210px;
     padding-right: 20px;
     padding-left: 20px;
@@ -85,7 +84,6 @@ body{
 
 .container__large {
     width: 100%;
-    /* max-width: 1130px; */
     max-width: 1170px;
     padding-right: 20px;
     padding-left: 20px;
@@ -278,16 +276,6 @@ form .form-control {
 	background: none;
 	outline: none;
 }
-
-/* small {
-	position: absolute;
-	left: 0;
-	top: 100%;
-	margin-top: 3px;
-	color: #e74c3c;
-    font-size: 1.4rem;
-    line-height: 1.5;
-} */
 
 .form-control span::before {
 	content: '';
