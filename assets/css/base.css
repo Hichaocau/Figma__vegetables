@@ -7,6 +7,10 @@
     --des-color: #585C7B;
     --bgc-color: #EBECFE;
     --style-color: #0D6EFD;
+    --type-color: #B4B7C9;
+    --footer-color: #9397AD;
+    --logo-color: #484ACF;
+    --white-color: #FFFFFF;
 }
 
 *{
@@ -109,10 +113,6 @@ button{
 
 }
 
-.bd{
-    border-top: 2px solid #E2E5F1;
-}
-
 .transition{
     transition: all 0.2s linear;
 }
@@ -125,7 +125,6 @@ button{
     line-height: 1.5;
     font-weight: 500;
     border-radius: 8px;
-    cursor: pointer;
 }
 
 .btn:hover{

@@ -112,17 +112,24 @@ function buyProduct(){
     const iconMinus = document.querySelectorAll('.modal__cart-minus')
 
     const numberInput = document.querySelectorAll('.modal__cart-input')
+    const priceList = document.querySelectorAll('.feauted__info-price--sale')
 
     numberInput.forEach((number, index) => {
         number.placeholder = 1
         let i = 1;
         iconPlus[index].addEventListener('click', function(e){
+            if( i === 9){
+                i = 0;
+            }
             number.placeholder = ++i;
+
+            priceList[index].innerHTML = `$${i*200}.00`
         })
         iconMinus[index].addEventListener('click', function(e){
             if( i != 0){
                 number.placeholder = --i;
             }
+            priceList[index].innerHTML = `$${i*200}.00`
         })
     })
 }

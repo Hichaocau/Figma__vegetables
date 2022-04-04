@@ -20,7 +20,15 @@
         font-size: 1.4rem;
     }
     .hero{
-        display: block;
+        padding-bottom: 320px;
+    }
+    .hero__img{
+        display: flex;
+        top: 35%;
+    }
+    .hero__img img{
+        width: 70%;
+        margin: auto;
     }
     .hero__text{
         max-width: unset;
@@ -32,9 +40,6 @@
     .header__logo a{
         margin-top: 0;
         font-size: 1.8em;
-    }
-    .hero__img img{
-        transform: none;
     }
     .category{
         padding-top: 40px;
@@ -131,9 +136,6 @@
     .category__header{
         text-align: center;
     }
-    .hero__img{
-        margin-top: 20px;
-    }
 }
 
 /* Tablet */
@@ -151,15 +153,12 @@
     .delivery__info{
         margin: 52px 0 80px 57px;
     }
-    .hero__img{
-        display: flex;
-    }
-    .hero__img img{
-        width: 70%;
-        margin: auto;
-    }
     .category__fresh-item--text{
         bottom: 100px;
+    }
+    .category__header::after{
+        left: 35%;
+        width: 30%;
     }
     
 }
@@ -195,6 +194,10 @@
         left: 28px;
         bottom: 18px;
     }
+    .category__header::after{
+        left: 23%;
+        width: 53%;
+    }
     .delivery__info h2{
         font-size: 3.5rem;
     }
@@ -211,5 +214,23 @@
     .footer__info-socials--text p {
         margin-top: 18px;
     }
+    .hero__img{
+        top: 40%;
+    }
     
+}
+
+@media (max-width: 425px){
+    .hero__img{
+        top: 65%;
+    }
+    .hero{
+        padding-bottom: 148px;
+    } 
+}
+
+@media (min-width: 425px) and (max-width: 640px){
+    .hero__img{
+        top: 50%;
+    }
 }
