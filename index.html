@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vegetables</title>
     <!-- Logo page -->
-    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1667px-Figma-logo.svg.png" type="image/svg+xml">
+    <link rel="icon" href="./assets/imgs/pro3.png" type="image/svg+xml">
     <!-- font-awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- slick slider -->
     <link rel="stylesheet" href="./assets/slick-1.8.1/slick/slick.css">
+    <!-- scroll library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -19,31 +21,68 @@
 <body>
     <div class="main">
         <!-- header section start -->
-        <div class="header__wrap">
+        <div class="header__wrap transition">
             <div class="header container">
                 <div class="header__list-wrap df">
                     <div class="header__logo df">
-                        <span>Czar Shop</span>
+                        <a href="#">Czar Shop</a>
                         <img src="./assets/imgs/icon-logo.svg" alt="">
                     </div>
-                    <ul class="header__list df">
-                        <li class="header__item df">
-                            <a class="text header__item-active" href="">Home</a>
-                            <img src="./assets/imgs/arrow-down.svg" alt="">
+                    <ul class="header__list df hide-on-tablet hide-on-mobile">
+                        <li class="header__item df df__flex">
+                            <div class="header__item-home df">
+                                <a class="text header__item-active" href="#">Home</a>
+                                <img src="./assets/imgs/arrow-down.svg" alt="">
+                                <div class="header__item-navbar">
+                                    <a class="text" href="#save">Save up</a>
+                                    <a class="text" href="#category">Category</a>
+                                </div>
+                            </div>
                         </li>
                         <li class="header__item df">
-                            <a class="text" href="">Shop</a>
+                            <a class="text" href="#shop">Shop</a>
                         </li>
                         <li class="header__item df">
-                            <a class="text" href="">Blog</a>
+                            <a class="text" href="#blog">Blog</a>
                         </li>
                         <li class="header__item df">
-                            <a class="text" href="">Page</a>
+                            <a class="text" href="#page">Page</a>
                         </li>
                         <li class="header__item df">
-                            <a class="text" href="">Vendor</a>
+                            <a class="text" href="#vendor">Vendor</a>
                         </li>
                     </ul>
+                    <div class="header__menu hide-on-pc ">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <div class="header__navbar hide-on-pc ">
+                        <ul class="header__list">
+                            <li class="header__item df df__flex">
+                                <div class="header__item-home">
+                                    <div class="header__navbar-home df">
+                                        <a class="text header__item-active" href="#">Home</a>
+                                        <img src="./assets/imgs/arrow-down.svg" alt="">
+                                    </div>
+                                    <div class="header__item-navbar">
+                                        <a class="text" href="#save">Save up</a>
+                                        <a class="text" href="#category">Category</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="header__item df">
+                                <a class="text" href="#shop">Shop</a>
+                            </li>
+                            <li class="header__item df">
+                                <a class="text" href="#blog">Blog</a>
+                            </li>
+                            <li class="header__item df">
+                                <a class="text" href="#page">Page</a>
+                            </li>
+                            <li class="header__item df">
+                                <a class="text" href="#vendor">Vendor</a>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="header__btn df">
                         <button class="header__btn-first btn">Login</button>
                         <button class="header__btn-second btn">Sign Up</button>
@@ -52,16 +91,16 @@
             </div>
             
             <!-- hero section start -->
-            <div class="hero container df">
-                <div class="hero__text df df__flex">
+            <div class="hero container df" id="save">
+                <div class="hero__text df df__flex" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <p class="text__sub hero__text-subheader">Save up 30% off</p>
                     <h1 class=" hero__text-header">Bengal Vegetable Farm Organic 100%</h1>
                     <div class="text hero__text-des">Shujaa is a mobile platform that enables you to connect with your family and friends anywhere at anytime.</div>
                     <button class="btn">
-                        <a href="">Shop now</a>
+                        <a href="#shop">Shop now</a>
                     </button>
                 </div>
-                <div class="hero__img">
+                <div class="hero__img" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <img src="./assets/imgs/img-heroo.png" alt="">
                 </div>
             </div>
@@ -70,73 +109,81 @@
         <!-- header section end -->
 
         <!-- category section start -->
-        <div class="category container">
+        <div class="category container" id="category">
             <div class="category__header">
                 <h2 class="text__header">Search by Category</h2>
             </div>
-            <div class="category__list grid wide">
+            <div class="category__list-wrap grid wide bd">
                 <div class="row category__list-slider">
-                    <div class="col l-3 m-3 c-3">
+                    <div class="col l-3 m-3 c-6">
                         <div class="category__item">
                             <div class="category__item-img">
                                 <img src="./assets/imgs/cate1.png" alt="">
                             </div>
-                            <p class="category__item-name text__sub">Groceries</p>
+                            <a href="" class="category__item-name text__sub">Groceries</a>
                         </div>
                     </div>
-                    <div class="col l-3 m-3 c-3">
+                    <div class="col l-3 m-3 c-6">
                         <div class="category__item">
                             <div class="category__item-img">
                                 <img src="./assets/imgs/cate2.png" alt="">
                             </div>
-                            <p class="category__item-name text__sub">Fish</p>
+                            <a href="" class="category__item-name text__sub">Fish</a>
                         </div>
                     </div>
-                    <div class="col l-3 m-3 c-3">
+                    <div class="col l-3 m-3 c-6">
                         <div class="category__item">
                             <div class="category__item-img">
                                 <img src="./assets/imgs/cate3.png" alt="">
                             </div>
-                            <p class="category__item-name text__sub">Vegetables</p>
+                            <a href="" class="category__item-name text__sub">Vegetables</a>
                         </div>
                     </div>
-                    <div class="col l-3 m-3 c-3">
+                    <div class="col l-3 m-3 c-6">
                         <div class="category__item">
                             <div class="category__item-img">
                                 <img src="./assets/imgs/cate4.png" alt="">
                             </div>
-                            <p class="category__item-name text__sub">Groceries</p>
+                            <a href="" class="category__item-name text__sub">Groceries</a>
                         </div>
                     </div>
-                    <div class="col l-3 m-3 c-3">
+                    <div class="col l-3 m-3 c-6">
+                        <div class="category__item">
+                            <div class="category__item-img">
+                                <img src="./assets/imgs/cate3.png" alt="">
+                            </div>
+                            <a href="" class="category__item-name text__sub">Vegetables</a>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-3 c-6">
                         <div class="category__item">
                             <div class="category__item-img">
                                 <img src="./assets/imgs/cate1.png" alt="">
                             </div>
-                            <p class="category__item-name text__sub">Groceries</p>
+                            <a href="" class="category__item-name text__sub">Groceries</a>
                         </div>
                     </div>
-                    <div class="col l-3 m-3 c-3">
+                    <div class="col l-3 m-3 c-6">
                         <div class="category__item">
                             <div class="category__item-img">
                                 <img src="./assets/imgs/cate2.png" alt="">
                             </div>
-                            <p class="category__item-name text__sub">Groceries</p>
+                            <a href="" class="category__item-name text__sub">Fish</a>
                         </div>
                     </div>
-                    <div class="col l-3 m-3 c-3">
+                    <div class="col l-3 m-3 c-6">
                         <div class="category__item">
                             <div class="category__item-img">
-                                <img src="./assets/imgs/cate2.png" alt="">
+                                <img src="./assets/imgs/cate4.png" alt="">
                             </div>
-                            <p class="category__item-name text__sub">Groceries</p>
+                            <a href="" class="category__item-name text__sub">Groceries</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="category__fresh grid wide">
                 <div class="row">
-                    <div class="col l-6 m-6 c-12">
+                    <div class="col l-6 m-12 c-12" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <div class="category__fresh-item">
                             <div class="category__fresh-item--img">
                                 <img src="./assets/imgs/cateimg1.jpg" alt="">
@@ -146,13 +193,13 @@
                                 <p class="text__des">Fresh Summer With</p>
                                 <p class="text__des">Just $200.99</p>
                                 <button class="text">
-                                    <a href="">Shop now</a>                             
+                                    <a href="#shop">Shop now</a>                             
                                 </button>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col l-6 m-6 c-12">
+                    <div class="col l-6 m-12 c-12" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <div class="category__fresh-item">
                             <div class="category__fresh-item--img">
                                 <img src="./assets/imgs/cateimg2.jpg" alt="">
@@ -162,7 +209,7 @@
                                 <p class="text__des">Fresh</p>
                                 <p class="text__des">Vegetables</p>
                                 <button class="text">
-                                    <a href="">Shop now</a>                             
+                                    <a href="#shop">Shop now</a>                             
                                 </button>
                             </div>
                         </div>
@@ -174,10 +221,10 @@
 
         <!-- feauted section start -->
         <div class="feauted container">
-            <div class="category__header">
+            <div class="feauted__header category__header">
                 <h2 class="text__header">Feauted Product</h2>
             </div>
-            <div class="category__list grid wide">
+            <div class="feauted__list grid wide bd">
                 <div class="row category__list-slider">
                     <div class="col l-3 m-3 c-3">
                         <div class="feauted__item-wrap">
@@ -189,68 +236,17 @@
                                     <span class="text">30%</span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="feauted__item-info">
-                            <h3 class="feauted__info-name text__sub">Product Name</h3>
-                            <div class="feauted__info-star--wrap df__center df">
-                                <div class="feauted__info-star--list df">
-                                    <img src="./assets/imgs/icon-star.svg" alt="">
-                                    <img src="./assets/imgs/icon-star.svg" alt="">
-                                    <img src="./assets/imgs/icon-star.svg" alt="">
-                                    <img src="./assets/imgs/icon-star.svg" alt="">
-                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                            <div class="modal__cart-wrap df">
+                                <div class="modal__cart df">
+                                    <div class="modal__cart-item modal__cart-plus df">
+                                        <img src="./assets/imgs/plus.svg" alt="">
+                                    </div>
+                                    <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
+                                    <div class="modal__cart-item modal__cart-minus df">
+                                        <img src="./assets/imgs/minus.svg" alt="">
+                                    </div>
                                 </div>
-                                <span class="text">(121)</span>
-                            </div>
-                            <div class="feauted__info-price df__center df">
-                                <p class="text__style feauted__info-price--sale">$200.00</p>
-                                <p class="text__style feauted__info-price--old">$300.00</p>
-                            </div>
-                            <button class="feauted__info-btn df__center df">
-                                <a class="text__style" href="">Add to Cart</a>
-                                <img src="./assets/imgs/icon-cart.svg" alt="">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col l-3 m-3 c-3">
-                        <div class="category__item feauted__item">
-                            <div class="category__item-img feauted__item-img">
-                                <img src="./assets/imgs/fe2.png" alt="">
-                            </div>
-                            <div class="feauted__item-sale">
-                                <span class="text">30%</span>
-                            </div>                            
-                        </div>
-                        <div class="feauted__item-info">
-                            <h3 class="feauted__info-name text__sub">Product Name</h3>
-                            <div class="feauted__info-star--wrap df__center df">
-                                <div class="feauted__info-star--list df">
-                                    <img src="./assets/imgs/icon-star.svg" alt="">
-                                    <img src="./assets/imgs/icon-star.svg" alt="">
-                                    <img src="./assets/imgs/icon-star.svg" alt="">
-                                    <img src="./assets/imgs/icon-star.svg" alt="">
-                                    <img src="./assets/imgs/icon-star.svg" alt="">
-                                </div>
-                                <span class="text">(121)</span>
-                            </div>
-                            <div class="feauted__info-price df__center df">
-                                <p class="text__style feauted__info-price--sale">$200.00</p>
-                                <p class="text__style feauted__info-price--old">$300.00</p>
-                            </div>
-                            <button class="feauted__info-btn df__center df">
-                                <a class="text__style" href="">Add to Cart</a>
-                                <img src="./assets/imgs/icon-cart.svg" alt="">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col l-3 m-3 c-3">
-                        <div class="category__item feauted__item">
-                            <div class="category__item-img feauted__item-img">
-                                <img src="./assets/imgs/fe1.png" alt="">
                             </div>  
-                            <div class="feauted__item-sale">
-                                <span class="text">30%</span>
-                            </div>        
                         </div>
                         <div class="feauted__item-info">
                             <h3 class="feauted__info-name text__sub">Product Name</h3>
@@ -275,14 +271,27 @@
                         </div>
                     </div>
                     <div class="col l-3 m-3 c-3">
-                        <div class="category__item feauted__item">
-                            <div class="category__item-img feauted__item-img">
-                                <img src="./assets/imgs/fe3.png" alt="">
+                        <div class="feauted__item-wrap">
+                            <div class="category__item feauted__item">
+                                <div class="category__item-img feauted__item-img">
+                                    <img src="./assets/imgs/fe2.png" alt="">
+                                </div>    
+                                <div class="feauted__item-sale">
+                                    <span class="text">30%</span>
+                                </div>
                             </div>
-                            <div class="feauted__item-sale">
-                                <span class="text">30%</span>
-                            </div>
-                        </div>
+                            <div class="modal__cart-wrap df">
+                                <div class="modal__cart df">
+                                    <div class="modal__cart-item modal__cart-plus df">
+                                        <img src="./assets/imgs/plus.svg" alt="">
+                                    </div>
+                                    <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
+                                    <div class="modal__cart-item modal__cart-minus df">
+                                        <img src="./assets/imgs/minus.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>                      
                         <div class="feauted__item-info">
                             <h3 class="feauted__info-name text__sub">Product Name</h3>
                             <div class="feauted__info-star--wrap df__center df">
@@ -306,14 +315,27 @@
                         </div>
                     </div>
                     <div class="col l-3 m-3 c-3">
-                        <div class="category__item feauted__item">
-                            <div class="category__item-img feauted__item-img">
-                                <img src="./assets/imgs/fe2.png" alt="">
+                        <div class="feauted__item-wrap">
+                            <div class="category__item feauted__item">
+                                <div class="category__item-img feauted__item-img">
+                                    <img src="./assets/imgs/fe1.png" alt="">
+                                </div>    
+                                <div class="feauted__item-sale">
+                                    <span class="text">30%</span>
+                                </div>
                             </div>
-                            <div class="feauted__item-sale">
-                                <span class="text">30%</span>
-                            </div>
-                        </div>
+                            <div class="modal__cart-wrap df">
+                                <div class="modal__cart df">
+                                    <div class="modal__cart-item modal__cart-plus df">
+                                        <img src="./assets/imgs/plus.svg" alt="">
+                                    </div>
+                                    <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
+                                    <div class="modal__cart-item modal__cart-minus df">
+                                        <img src="./assets/imgs/minus.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>     
                         <div class="feauted__item-info">
                             <h3 class="feauted__info-name text__sub">Product Name</h3>
                             <div class="feauted__info-star--wrap df__center df">
@@ -337,14 +359,27 @@
                         </div>
                     </div>
                     <div class="col l-3 m-3 c-3">
-                        <div class="category__item feauted__item">
-                            <div class="category__item-img feauted__item-img">
-                                <img src="./assets/imgs/fe1.png" alt="">
+                        <div class="feauted__item-wrap">
+                            <div class="category__item feauted__item">
+                                <div class="category__item-img feauted__item-img">
+                                    <img src="./assets/imgs/fe3.png" alt="">
+                                </div>    
+                                <div class="feauted__item-sale">
+                                    <span class="text">30%</span>
+                                </div>
                             </div>
-                            <div class="feauted__item-sale">
-                                <span class="text">30%</span>
-                            </div>
-                        </div>
+                            <div class="modal__cart-wrap df">
+                                <div class="modal__cart df">
+                                    <div class="modal__cart-item modal__cart-plus df">
+                                        <img src="./assets/imgs/plus.svg" alt="">
+                                    </div>
+                                    <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
+                                    <div class="modal__cart-item modal__cart-minus df">
+                                        <img src="./assets/imgs/minus.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>   
                         <div class="feauted__item-info">
                             <h3 class="feauted__info-name text__sub">Product Name</h3>
                             <div class="feauted__info-star--wrap df__center df">
@@ -368,14 +403,115 @@
                         </div>
                     </div>
                     <div class="col l-3 m-3 c-3">
-                        <div class="category__item feauted__item">
-                            <div class="category__item-img feauted__item-img">
-                                <img src="./assets/imgs/fe3.png" alt="">
+                        <div class="feauted__item-wrap">
+                            <div class="category__item feauted__item">
+                                <div class="category__item-img feauted__item-img">
+                                    <img src="./assets/imgs/fe2.png" alt="">
+                                </div>    
+                                <div class="feauted__item-sale">
+                                    <span class="text">30%</span>
+                                </div>
                             </div>
-                            <div class="feauted__item-sale">
-                                <span class="text">30%</span>
+                            <div class="modal__cart-wrap df">
+                                <div class="modal__cart df">
+                                    <div class="modal__cart-item modal__cart-plus df">
+                                        <img src="./assets/imgs/plus.svg" alt="">
+                                    </div>
+                                    <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
+                                    <div class="modal__cart-item modal__cart-minus df">
+                                        <img src="./assets/imgs/minus.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>   
+                        <div class="feauted__item-info">
+                            <h3 class="feauted__info-name text__sub">Product Name</h3>
+                            <div class="feauted__info-star--wrap df__center df">
+                                <div class="feauted__info-star--list df">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                </div>
+                                <span class="text">(121)</span>
                             </div>
+                            <div class="feauted__info-price df__center df">
+                                <p class="text__style feauted__info-price--sale">$200.00</p>
+                                <p class="text__style feauted__info-price--old">$300.00</p>
+                            </div>
+                            <button class="feauted__info-btn df__center df">
+                                <a class="text__style" href="">Add to Cart</a>
+                                <img src="./assets/imgs/icon-cart.svg" alt="">
+                            </button>
                         </div>
+                    </div>
+                    <div class="col l-3 m-3 c-3">
+                        <div class="feauted__item-wrap">
+                            <div class="category__item feauted__item">
+                                <div class="category__item-img feauted__item-img">
+                                    <img src="./assets/imgs/fe1.png" alt="">
+                                </div>    
+                                <div class="feauted__item-sale">
+                                    <span class="text">30%</span>
+                                </div>
+                            </div>
+                            <div class="modal__cart-wrap df">
+                                <div class="modal__cart df">
+                                    <div class="modal__cart-item modal__cart-plus df">
+                                        <img src="./assets/imgs/plus.svg" alt="">
+                                    </div>
+                                    <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
+                                    <div class="modal__cart-item modal__cart-minus df">
+                                        <img src="./assets/imgs/minus.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>   
+                        <div class="feauted__item-info">
+                            <h3 class="feauted__info-name text__sub">Product Name</h3>
+                            <div class="feauted__info-star--wrap df__center df">
+                                <div class="feauted__info-star--list df">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                </div>
+                                <span class="text">(121)</span>
+                            </div>
+                            <div class="feauted__info-price df__center df">
+                                <p class="text__style feauted__info-price--sale">$200.00</p>
+                                <p class="text__style feauted__info-price--old">$300.00</p>
+                            </div>
+                            <button class="feauted__info-btn df__center df">
+                                <a class="text__style" href="">Add to Cart</a>
+                                <img src="./assets/imgs/icon-cart.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-3 c-3">
+                        <div class="feauted__item-wrap">
+                            <div class="category__item feauted__item">
+                                <div class="category__item-img feauted__item-img">
+                                    <img src="./assets/imgs/fe3.png" alt="">
+                                </div>    
+                                <div class="feauted__item-sale">
+                                    <span class="text">30%</span>
+                                </div>
+                            </div>
+                            <div class="modal__cart-wrap df">
+                                <div class="modal__cart df">
+                                    <div class="modal__cart-item modal__cart-plus df">
+                                        <img src="./assets/imgs/plus.svg" alt="">
+                                    </div>
+                                    <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
+                                    <div class="modal__cart-item modal__cart-minus df">
+                                        <img src="./assets/imgs/minus.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>   
                         <div class="feauted__item-info">
                             <h3 class="feauted__info-name text__sub">Product Name</h3>
                             <div class="feauted__info-star--wrap df__center df">
@@ -404,7 +540,7 @@
         <!-- feauted section end -->
 
         <!-- sale section start -->
-        <div class="sale container__full">
+        <div class="sale container__full" id="page">
             <div class="sale__info-wrap ">
                 <div class="sale__info">
                     <p class="sale__info-header">
@@ -414,27 +550,27 @@
                     </p>
                     <p class="sale__info-des text__des">Your daily dose of nutrition. No added suger. No Preservatives. No flavour & colour</p>
                     <div class="sale__info-time">
-                        <ul class="sale__info-time--list df">
-                            <li class="sale__info-time--item">
-                                <div class="sale__info-number text__des">68</div>
+                        <ul class="sale__info-time--list df countdown">
+                            <li class="sale__info-time--item sale__days">
+                                <div class="sale__info-number text__des days">68</div>
                                 <span class="text">Days</span>
                             </li>
-                            <li class="sale__info-time--item">
-                                <div class="sale__info-number text__des">03</div>
+                            <li class="sale__info-time--item sale__hours">
+                                <div class="sale__info-number text__des hours">03</div>
                                 <span class="text">Hours</span>
                             </li>
-                            <li class="sale__info-time--item">
-                                <div class="sale__info-number text__des">35</div>
+                            <li class="sale__info-time--item sale__minutes">
+                                <div class="sale__info-number text__des minutes">35</div>
                                 <span class="text">Mins</span>
                             </li>
-                            <li class="sale__info-time--item">
-                                <div class="sale__info-number text__des">57</div>
+                            <li class="sale__info-time--item sale__seconds">
+                                <div class="sale__info-number text__des seconds">57</div>
                                 <span class="text">Secs</span>
                             </li>
                         </ul>
                     </div>
                     <button class="sale__info-btn">
-                        <a href="" class="text__style">
+                        <a href="#shop" class="text__style">
                             Shop now
                         </a>
                     </button>
@@ -444,13 +580,813 @@
         <!-- sale section end -->
 
         <!-- product section start -->
-        <div class="product container">
-            
+        <div class="product feauted container" id="shop">
+            <div class="product__header category__header df">
+                <h2 class="text__header">Hot Product</h2>
+                <div class="product__shop df">
+                    <a href="" class="text__style">Shop all</a>
+                    <div class="product__shop-icon df">
+                        <img src="./assets/imgs/arrow-right.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="product__options">
+                <ul class="product__options-list df">
+                    <li class="product__options-item product__options-item--border">
+                        <span class="text">All</span>
+                    </li>
+                    <li class="product__options-item">
+                        <span class="text">Beverages</span>
+                    </li>
+                    <li class="product__options-item">
+                        <span class="text">Dried</span>
+                    </li>
+                    <li class="product__options-item">
+                        <span class="text">Food</span>
+                    </li>
+                    <li class="product__options-item">
+                        <span class="text">Fruits</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="category__list grid wide">
+                <div class="row category__list-slider product__list-slider">
+                    <div class="col l-3 m-3 c-3">
+                        <div class="feauted__item-wrap">
+                            <div class="category__item feauted__item">
+                                <div class="category__item-img feauted__item-img">
+                                    <img src="./assets/imgs/pro1.png" alt="">
+                                </div>    
+                                <div class="feauted__item-sale">
+                                    <span class="text">30%</span>
+                                </div>
+                            </div>
+                            <div class="modal__cart-wrap df">
+                                <div class="modal__cart df">
+                                    <div class="modal__cart-item modal__cart-plus df">
+                                        <img src="./assets/imgs/plus.svg" alt="">
+                                    </div>
+                                    <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
+                                    <div class="modal__cart-item modal__cart-minus df">
+                                        <img src="./assets/imgs/minus.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>     
+                        <div class="feauted__item-info">
+                            <h3 class="feauted__info-name text__sub">Product Name</h3>
+                            <div class="feauted__info-star--wrap df__center df">
+                                <div class="feauted__info-star--list df">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                </div>
+                                <span class="text">(121)</span>
+                            </div>
+                            <div class="feauted__info-price df__center df">
+                                <p class="text__style feauted__info-price--sale">$200.00</p>
+                                <p class="text__style feauted__info-price--old">$300.00</p>
+                            </div>
+                            <button class="feauted__info-btn df__center df">
+                                <a class="text__style" href="">Add to Cart</a>
+                                <img src="./assets/imgs/icon-cart.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-3 c-3">
+                        <div class="feauted__item-wrap">
+                            <div class="category__item feauted__item">
+                                <div class="category__item-img feauted__item-img">
+                                    <img src="./assets/imgs/fe1.png" alt="">
+                                </div>    
+                                <div class="feauted__item-sale">
+                                    <span class="text">30%</span>
+                                </div>
+                            </div>
+                            <div class="modal__cart-wrap df">
+                                <div class="modal__cart df">
+                                    <div class="modal__cart-item modal__cart-plus df">
+                                        <img src="./assets/imgs/plus.svg" alt="">
+                                    </div>
+                                    <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
+                                    <div class="modal__cart-item modal__cart-minus df">
+                                        <img src="./assets/imgs/minus.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>     
+                        <div class="feauted__item-info">
+                            <h3 class="feauted__info-name text__sub">Product Name</h3>
+                            <div class="feauted__info-star--wrap df__center df">
+                                <div class="feauted__info-star--list df">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                </div>
+                                <span class="text">(121)</span>
+                            </div>
+                            <div class="feauted__info-price df__center df">
+                                <p class="text__style feauted__info-price--sale">$200.00</p>
+                                <p class="text__style feauted__info-price--old">$300.00</p>
+                            </div>
+                            <button class="feauted__info-btn df__center df">
+                                <a class="text__style" href="">Add to Cart</a>
+                                <img src="./assets/imgs/icon-cart.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-3 c-3">
+                        <div class="feauted__item-wrap">
+                            <div class="category__item feauted__item">
+                                <div class="category__item-img feauted__item-img">
+                                    <img src="./assets/imgs/pro2.png" alt="">
+                                </div>    
+                                <div class="feauted__item-sale">
+                                    <span class="text">30%</span>
+                                </div>
+                            </div>
+                            <div class="modal__cart-wrap df">
+                                <div class="modal__cart df">
+                                    <div class="modal__cart-item modal__cart-plus df">
+                                        <img src="./assets/imgs/plus.svg" alt="">
+                                    </div>
+                                    <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
+                                    <div class="modal__cart-item modal__cart-minus df">
+                                        <img src="./assets/imgs/minus.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>     
+                        <div class="feauted__item-info">
+                            <h3 class="feauted__info-name text__sub">Product Name</h3>
+                            <div class="feauted__info-star--wrap df__center df">
+                                <div class="feauted__info-star--list df">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                </div>
+                                <span class="text">(121)</span>
+                            </div>
+                            <div class="feauted__info-price df__center df">
+                                <p class="text__style feauted__info-price--sale">$200.00</p>
+                                <p class="text__style feauted__info-price--old">$300.00</p>
+                            </div>
+                            <button class="feauted__info-btn df__center df">
+                                <a class="text__style" href="">Add to Cart</a>
+                                <img src="./assets/imgs/icon-cart.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-3 c-3">
+                        <div class="feauted__item-wrap">
+                            <div class="category__item feauted__item">
+                                <div class="category__item-img feauted__item-img">
+                                    <img src="./assets/imgs/pro3.png" alt="">
+                                </div>    
+                                <div class="feauted__item-sale">
+                                    <span class="text">30%</span>
+                                </div>
+                            </div>
+                            <div class="modal__cart-wrap df">
+                                <div class="modal__cart df">
+                                    <div class="modal__cart-item modal__cart-plus df">
+                                        <img src="./assets/imgs/plus.svg" alt="">
+                                    </div>
+                                    <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
+                                    <div class="modal__cart-item modal__cart-minus df">
+                                        <img src="./assets/imgs/minus.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>     
+                        <div class="feauted__item-info">
+                            <h3 class="feauted__info-name text__sub">Product Name</h3>
+                            <div class="feauted__info-star--wrap df__center df">
+                                <div class="feauted__info-star--list df">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                </div>
+                                <span class="text">(121)</span>
+                            </div>
+                            <div class="feauted__info-price df__center df">
+                                <p class="text__style feauted__info-price--sale">$200.00</p>
+                                <p class="text__style feauted__info-price--old">$300.00</p>
+                            </div>
+                            <button class="feauted__info-btn df__center df">
+                                <a class="text__style" href="">Add to Cart</a>
+                                <img src="./assets/imgs/icon-cart.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-3 c-3">
+                        <div class="feauted__item-wrap">
+                            <div class="category__item feauted__item">
+                                <div class="category__item-img feauted__item-img">
+                                    <img src="./assets/imgs/fe2.png" alt="">
+                                </div>    
+                                <div class="feauted__item-sale">
+                                    <span class="text">30%</span>
+                                </div>
+                            </div>
+                            <div class="modal__cart-wrap df">
+                                <div class="modal__cart df">
+                                    <div class="modal__cart-item modal__cart-plus df">
+                                        <img src="./assets/imgs/plus.svg" alt="">
+                                    </div>
+                                    <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
+                                    <div class="modal__cart-item modal__cart-minus df">
+                                        <img src="./assets/imgs/minus.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>     
+                        <div class="feauted__item-info">
+                            <h3 class="feauted__info-name text__sub">Product Name</h3>
+                            <div class="feauted__info-star--wrap df__center df">
+                                <div class="feauted__info-star--list df">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                </div>
+                                <span class="text">(121)</span>
+                            </div>
+                            <div class="feauted__info-price df__center df">
+                                <p class="text__style feauted__info-price--sale">$200.00</p>
+                                <p class="text__style feauted__info-price--old">$300.00</p>
+                            </div>
+                            <button class="feauted__info-btn df__center df">
+                                <a class="text__style" href="">Add to Cart</a>
+                                <img src="./assets/imgs/icon-cart.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-3 c-3">
+                        <div class="feauted__item-wrap">
+                            <div class="category__item feauted__item">
+                                <div class="category__item-img feauted__item-img">
+                                    <img src="./assets/imgs/fe1.png" alt="">
+                                </div>    
+                                <div class="feauted__item-sale">
+                                    <span class="text">30%</span>
+                                </div>
+                            </div>
+                            <div class="modal__cart-wrap df">
+                                <div class="modal__cart df">
+                                    <div class="modal__cart-item modal__cart-plus df">
+                                        <img src="./assets/imgs/plus.svg" alt="">
+                                    </div>
+                                    <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
+                                    <div class="modal__cart-item modal__cart-minus df">
+                                        <img src="./assets/imgs/minus.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>     
+                        <div class="feauted__item-info">
+                            <h3 class="feauted__info-name text__sub">Product Name</h3>
+                            <div class="feauted__info-star--wrap df__center df">
+                                <div class="feauted__info-star--list df">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                </div>
+                                <span class="text">(121)</span>
+                            </div>
+                            <div class="feauted__info-price df__center df">
+                                <p class="text__style feauted__info-price--sale">$200.00</p>
+                                <p class="text__style feauted__info-price--old">$300.00</p>
+                            </div>
+                            <button class="feauted__info-btn df__center df">
+                                <a class="text__style" href="">Add to Cart</a>
+                                <img src="./assets/imgs/icon-cart.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-3 c-3">
+                        <div class="feauted__item-wrap">
+                            <div class="category__item feauted__item">
+                                <div class="category__item-img feauted__item-img">
+                                    <img src="./assets/imgs/fe3.png" alt="">
+                                </div>    
+                                <div class="feauted__item-sale">
+                                    <span class="text">30%</span>
+                                </div>
+                            </div>
+                            <div class="modal__cart-wrap df">
+                                <div class="modal__cart df">
+                                    <div class="modal__cart-item modal__cart-plus df">
+                                        <img src="./assets/imgs/plus.svg" alt="">
+                                    </div>
+                                    <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
+                                    <div class="modal__cart-item modal__cart-minus df">
+                                        <img src="./assets/imgs/minus.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>     
+                        <div class="feauted__item-info">
+                            <h3 class="feauted__info-name text__sub">Product Name</h3>
+                            <div class="feauted__info-star--wrap df__center df">
+                                <div class="feauted__info-star--list df">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                </div>
+                                <span class="text">(121)</span>
+                            </div>
+                            <div class="feauted__info-price df__center df">
+                                <p class="text__style feauted__info-price--sale">$200.00</p>
+                                <p class="text__style feauted__info-price--old">$300.00</p>
+                            </div>
+                            <button class="feauted__info-btn df__center df">
+                                <a class="text__style" href="">Add to Cart</a>
+                                <img src="./assets/imgs/icon-cart.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-3 c-3">
+                        <div class="feauted__item-wrap">
+                            <div class="category__item feauted__item">
+                                <div class="category__item-img feauted__item-img">
+                                    <img src="./assets/imgs/pro3.png" alt="">
+                                </div>    
+                                <div class="feauted__item-sale">
+                                    <span class="text">30%</span>
+                                </div>
+                            </div>
+                            <div class="modal__cart-wrap df">
+                                <div class="modal__cart df">
+                                    <div class="modal__cart-item modal__cart-plus df">
+                                        <img src="./assets/imgs/plus.svg" alt="">
+                                    </div>
+                                    <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
+                                    <div class="modal__cart-item modal__cart-minus df">
+                                        <img src="./assets/imgs/minus.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>     
+                        <div class="feauted__item-info">
+                            <h3 class="feauted__info-name text__sub">Product Name</h3>
+                            <div class="feauted__info-star--wrap df__center df">
+                                <div class="feauted__info-star--list df">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                </div>
+                                <span class="text">(121)</span>
+                            </div>
+                            <div class="feauted__info-price df__center df">
+                                <p class="text__style feauted__info-price--sale">$200.00</p>
+                                <p class="text__style feauted__info-price--old">$300.00</p>
+                            </div>
+                            <button class="feauted__info-btn df__center df">
+                                <a class="text__style" href="">Add to Cart</a>
+                                <img src="./assets/imgs/icon-cart.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-3 c-3">
+                        <div class="feauted__item-wrap">
+                            <div class="category__item feauted__item">
+                                <div class="category__item-img feauted__item-img">
+                                    <img src="./assets/imgs/pro2.png" alt="">
+                                </div>    
+                                <div class="feauted__item-sale">
+                                    <span class="text">30%</span>
+                                </div>
+                            </div>
+                            <div class="modal__cart-wrap df">
+                                <div class="modal__cart df">
+                                    <div class="modal__cart-item modal__cart-plus df">
+                                        <img src="./assets/imgs/plus.svg" alt="">
+                                    </div>
+                                    <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
+                                    <div class="modal__cart-item modal__cart-minus df">
+                                        <img src="./assets/imgs/minus.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>     
+                        <div class="feauted__item-info">
+                            <h3 class="feauted__info-name text__sub">Product Name</h3>
+                            <div class="feauted__info-star--wrap df__center df">
+                                <div class="feauted__info-star--list df">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                </div>
+                                <span class="text">(121)</span>
+                            </div>
+                            <div class="feauted__info-price df__center df">
+                                <p class="text__style feauted__info-price--sale">$200.00</p>
+                                <p class="text__style feauted__info-price--old">$300.00</p>
+                            </div>
+                            <button class="feauted__info-btn df__center df">
+                                <a class="text__style" href="">Add to Cart</a>
+                                <img src="./assets/imgs/icon-cart.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category__list grid wide none">
+                <div class="row beverages__list-slider product__list-slider">
+                    <div class="col l-3 m-3 c-6">
+                        <div class="feauted__item-wrap">
+                            <div class="category__item feauted__item">
+                                <div class="category__item-img feauted__item-img">
+                                    <img src="./assets/imgs/cate1.png" alt="">
+                                </div>    
+                                <div class="feauted__item-sale">
+                                    <span class="text">30%</span>
+                                </div>
+                            </div>
+                            <div class="modal__cart-wrap df">
+                                <div class="modal__cart df">
+                                    <div class="modal__cart-item modal__cart-plus df">
+                                        <img src="./assets/imgs/plus.svg" alt="">
+                                    </div>
+                                    <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
+                                    <div class="modal__cart-item modal__cart-minus df">
+                                        <img src="./assets/imgs/minus.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>     
+                        <div class="feauted__item-info">
+                            <h3 class="feauted__info-name text__sub">Product Name</h3>
+                            <div class="feauted__info-star--wrap df__center df">
+                                <div class="feauted__info-star--list df">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                </div>
+                                <span class="text">(121)</span>
+                            </div>
+                            <div class="feauted__info-price df__center df">
+                                <p class="text__style feauted__info-price--sale">$200.00</p>
+                                <p class="text__style feauted__info-price--old">$300.00</p>
+                            </div>
+                            <button class="feauted__info-btn df__center df">
+                                <a class="text__style" href="">Add to Cart</a>
+                                <img src="./assets/imgs/icon-cart.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category__list grid wide none">
+                <div class="row dried__list-slider product__list-slider">
+                    <div class="col l-3 m-3 c-6">
+                        <div class="feauted__item-wrap">
+                            <div class="category__item feauted__item">
+                                <div class="category__item-img feauted__item-img">
+                                    <img src="./assets/imgs/fe1.png" alt="">
+                                </div>    
+                                <div class="feauted__item-sale">
+                                    <span class="text">30%</span>
+                                </div>
+                            </div>
+                            <div class="modal__cart-wrap df">
+                                <div class="modal__cart df">
+                                    <div class="modal__cart-item modal__cart-plus df">
+                                        <img src="./assets/imgs/plus.svg" alt="">
+                                    </div>
+                                    <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
+                                    <div class="modal__cart-item modal__cart-minus df">
+                                        <img src="./assets/imgs/minus.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>     
+                        <div class="feauted__item-info">
+                            <h3 class="feauted__info-name text__sub">Product Name</h3>
+                            <div class="feauted__info-star--wrap df__center df">
+                                <div class="feauted__info-star--list df">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                </div>
+                                <span class="text">(121)</span>
+                            </div>
+                            <div class="feauted__info-price df__center df">
+                                <p class="text__style feauted__info-price--sale">$200.00</p>
+                                <p class="text__style feauted__info-price--old">$300.00</p>
+                            </div>
+                            <button class="feauted__info-btn df__center df">
+                                <a class="text__style" href="">Add to Cart</a>
+                                <img src="./assets/imgs/icon-cart.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-3 c-6">
+                        <div class="feauted__item-wrap">
+                            <div class="category__item feauted__item">
+                                <div class="category__item-img feauted__item-img">
+                                    <img src="./assets/imgs/pro3.png" alt="">
+                                </div>    
+                                <div class="feauted__item-sale">
+                                    <span class="text">30%</span>
+                                </div>
+                            </div>
+                            <div class="modal__cart-wrap df">
+                                <div class="modal__cart df">
+                                    <div class="modal__cart-item modal__cart-plus df">
+                                        <img src="./assets/imgs/plus.svg" alt="">
+                                    </div>
+                                    <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
+                                    <div class="modal__cart-item modal__cart-minus df">
+                                        <img src="./assets/imgs/minus.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>     
+                        <div class="feauted__item-info">
+                            <h3 class="feauted__info-name text__sub">Product Name</h3>
+                            <div class="feauted__info-star--wrap df__center df">
+                                <div class="feauted__info-star--list df">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                </div>
+                                <span class="text">(121)</span>
+                            </div>
+                            <div class="feauted__info-price df__center df">
+                                <p class="text__style feauted__info-price--sale">$200.00</p>
+                                <p class="text__style feauted__info-price--old">$300.00</p>
+                            </div>
+                            <button class="feauted__info-btn df__center df">
+                                <a class="text__style" href="">Add to Cart</a>
+                                <img src="./assets/imgs/icon-cart.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category__list grid wide none">
+                <div class="row food__list-slider product__list-slider">
+                    <div class="col l-3 m-3 c-6">
+                        <div class="feauted__item-wrap">
+                            <div class="category__item feauted__item">
+                                <div class="category__item-img feauted__item-img">
+                                    <img src="./assets/imgs/fe3.png" alt="">
+                                </div>    
+                                <div class="feauted__item-sale">
+                                    <span class="text">30%</span>
+                                </div>
+                            </div>
+                            <div class="modal__cart-wrap df">
+                                <div class="modal__cart df">
+                                    <div class="modal__cart-item modal__cart-plus df">
+                                        <img src="./assets/imgs/plus.svg" alt="">
+                                    </div>
+                                    <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
+                                    <div class="modal__cart-item modal__cart-minus df">
+                                        <img src="./assets/imgs/minus.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>     
+                        <div class="feauted__item-info">
+                            <h3 class="feauted__info-name text__sub">Product Name</h3>
+                            <div class="feauted__info-star--wrap df__center df">
+                                <div class="feauted__info-star--list df">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                </div>
+                                <span class="text">(121)</span>
+                            </div>
+                            <div class="feauted__info-price df__center df">
+                                <p class="text__style feauted__info-price--sale">$200.00</p>
+                                <p class="text__style feauted__info-price--old">$300.00</p>
+                            </div>
+                            <button class="feauted__info-btn df__center df">
+                                <a class="text__style" href="">Add to Cart</a>
+                                <img src="./assets/imgs/icon-cart.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-3 c-6">
+                        <div class="feauted__item-wrap">
+                            <div class="category__item feauted__item">
+                                <div class="category__item-img feauted__item-img">
+                                    <img src="./assets/imgs/pro3.png" alt="">
+                                </div>    
+                                <div class="feauted__item-sale">
+                                    <span class="text">30%</span>
+                                </div>
+                            </div>
+                            <div class="modal__cart-wrap df">
+                                <div class="modal__cart df">
+                                    <div class="modal__cart-item modal__cart-plus df">
+                                        <img src="./assets/imgs/plus.svg" alt="">
+                                    </div>
+                                    <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
+                                    <div class="modal__cart-item modal__cart-minus df">
+                                        <img src="./assets/imgs/minus.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>     
+                        <div class="feauted__item-info">
+                            <h3 class="feauted__info-name text__sub">Product Name</h3>
+                            <div class="feauted__info-star--wrap df__center df">
+                                <div class="feauted__info-star--list df">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                </div>
+                                <span class="text">(121)</span>
+                            </div>
+                            <div class="feauted__info-price df__center df">
+                                <p class="text__style feauted__info-price--sale">$200.00</p>
+                                <p class="text__style feauted__info-price--old">$300.00</p>
+                            </div>
+                            <button class="feauted__info-btn df__center df">
+                                <a class="text__style" href="">Add to Cart</a>
+                                <img src="./assets/imgs/icon-cart.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category__list grid wide none">
+                <div class="row fruits__list-slider product__list-slider">
+                    <div class="col l-3 m-3 c-6">
+                        <div class="feauted__item-wrap">
+                            <div class="category__item feauted__item">
+                                <div class="category__item-img feauted__item-img">
+                                    <img src="./assets/imgs/pro1.png" alt="">
+                                </div>    
+                                <div class="feauted__item-sale">
+                                    <span class="text">30%</span>
+                                </div>
+                            </div>
+                            <div class="modal__cart-wrap df">
+                                <div class="modal__cart df">
+                                    <div class="modal__cart-item modal__cart-plus df">
+                                        <img src="./assets/imgs/plus.svg" alt="">
+                                    </div>
+                                    <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
+                                    <div class="modal__cart-item modal__cart-minus df">
+                                        <img src="./assets/imgs/minus.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>     
+                        <div class="feauted__item-info">
+                            <h3 class="feauted__info-name text__sub">Product Name</h3>
+                            <div class="feauted__info-star--wrap df__center df">
+                                <div class="feauted__info-star--list df">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                </div>
+                                <span class="text">(121)</span>
+                            </div>
+                            <div class="feauted__info-price df__center df">
+                                <p class="text__style feauted__info-price--sale">$200.00</p>
+                                <p class="text__style feauted__info-price--old">$300.00</p>
+                            </div>
+                            <button class="feauted__info-btn df__center df">
+                                <a class="text__style" href="">Add to Cart</a>
+                                <img src="./assets/imgs/icon-cart.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-3 c-6">
+                        <div class="feauted__item-wrap">
+                            <div class="category__item feauted__item">
+                                <div class="category__item-img feauted__item-img">
+                                    <img src="./assets/imgs/pro2.png" alt="">
+                                </div>    
+                                <div class="feauted__item-sale">
+                                    <span class="text">30%</span>
+                                </div>
+                            </div>
+                            <div class="modal__cart-wrap df">
+                                <div class="modal__cart df">
+                                    <div class="modal__cart-item modal__cart-plus df">
+                                        <img src="./assets/imgs/plus.svg" alt="">
+                                    </div>
+                                    <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
+                                    <div class="modal__cart-item modal__cart-minus df">
+                                        <img src="./assets/imgs/minus.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>     
+                        <div class="feauted__item-info">
+                            <h3 class="feauted__info-name text__sub">Product Name</h3>
+                            <div class="feauted__info-star--wrap df__center df">
+                                <div class="feauted__info-star--list df">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                </div>
+                                <span class="text">(121)</span>
+                            </div>
+                            <div class="feauted__info-price df__center df">
+                                <p class="text__style feauted__info-price--sale">$200.00</p>
+                                <p class="text__style feauted__info-price--old">$300.00</p>
+                            </div>
+                            <button class="feauted__info-btn df__center df">
+                                <a class="text__style" href="">Add to Cart</a>
+                                <img src="./assets/imgs/icon-cart.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col l-3 m-3 c-6 hide-on-mobile">
+                        <div class="feauted__item-wrap">
+                            <div class="category__item feauted__item">
+                                <div class="category__item-img feauted__item-img">
+                                    <img src="./assets/imgs/fe2.png" alt="">
+                                </div>    
+                                <div class="feauted__item-sale">
+                                    <span class="text">30%</span>
+                                </div>
+                            </div>
+                            <div class="modal__cart-wrap df">
+                                <div class="modal__cart df">
+                                    <div class="modal__cart-item modal__cart-plus df">
+                                        <img src="./assets/imgs/plus.svg" alt="">
+                                    </div>
+                                    <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
+                                    <div class="modal__cart-item modal__cart-minus df">
+                                        <img src="./assets/imgs/minus.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>     
+                        <div class="feauted__item-info">
+                            <h3 class="feauted__info-name text__sub">Product Name</h3>
+                            <div class="feauted__info-star--wrap df__center df">
+                                <div class="feauted__info-star--list df">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                </div>
+                                <span class="text">(121)</span>
+                            </div>
+                            <div class="feauted__info-price df__center df">
+                                <p class="text__style feauted__info-price--sale">$200.00</p>
+                                <p class="text__style feauted__info-price--old">$300.00</p>
+                            </div>
+                            <button class="feauted__info-btn df__center df">
+                                <a class="text__style" href="">Add to Cart</a>
+                                <img src="./assets/imgs/icon-cart.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
         </div>
         <!-- product section end -->
 
         <!-- delivery section start -->
-        <div class="delivery container__full">
+        <div class="delivery container__full" id="vendor">
             <div class="delivery__info-wrap">
                 <div class="delivery__info">
                     <h2 class="delivery__info-header">Free Home</h2>
@@ -467,22 +1403,368 @@
         <!-- delivery section end -->
 
         <!-- customer section start -->
-        <div class="customer container">
-            
+        <div class="customer container" id="blog">
+            <div class="customer__header">
+                <h2 class="text__header">Why customer love us ?</h2>
+            </div>
+            <div class="customer__list grid wide">
+                <div class="row customer__list-slider">
+                    <div class="col l-4 m-4 c-4">
+                        <div class="customer__item">
+                            <div class="customer__item-icon">
+                                <img src="./assets/imgs/icon-twitch.svg" alt="">
+                                <div class="customer__item-icon--star df">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="customer__item-des">
+                                <p class="text">Blood bank canine teeth larynx occupational therapist oncologist optician plaque spinal tap stat strep screen violence joints symptoms x-ray yawn. Contagious cough diabetes mellitus...</p>
+                            </div>
+                            <div class="customer__item-user df">
+                                <img src="./assets/imgs/user.jpg" alt="">
+                                <div class="customer__item-user--name df df__flex">
+                                    <span class="text">Ann Smith</span>
+                                    <span class="text">Photographer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-4 c-4">
+                        <div class="customer__item">
+                            <div class="customer__item-icon">
+                                <img src="./assets/imgs/icon-twitch.svg" alt="">
+                                <div class="customer__item-icon--star df">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="customer__item-des">
+                                <p class="text">Blood bank canine teeth larynx occupational therapist oncologist optician plaque spinal tap stat strep screen violence joints symptoms x-ray yawn. Contagious cough diabetes mellitus...</p>
+                            </div>
+                            <div class="customer__item-user df">
+                                <img src="./assets/imgs/user.jpg" alt="">
+                                <div class="customer__item-user--name df df__flex">
+                                    <span class="text">Ann Smith</span>
+                                    <span class="text">Photographer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-4 c-4">
+                        <div class="customer__item">
+                            <div class="customer__item-icon">
+                                <img src="./assets/imgs/icon-twitch.svg" alt="">
+                                <div class="customer__item-icon--star df">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="customer__item-des">
+                                <p class="text">Blood bank canine teeth larynx occupational therapist oncologist optician plaque spinal tap stat strep screen violence joints symptoms x-ray yawn. Contagious cough diabetes mellitus...</p>
+                            </div>
+                            <div class="customer__item-user df">
+                                <img src="./assets/imgs/user.jpg" alt="">
+                                <div class="customer__item-user--name df df__flex">
+                                    <span class="text">Ann Smith</span>
+                                    <span class="text">Photographer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-4 c-4">
+                        <div class="customer__item">
+                            <div class="customer__item-icon">
+                                <img src="./assets/imgs/icon-twitch.svg" alt="">
+                                <div class="customer__item-icon--star df">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="customer__item-des">
+                                <p class="text">Blood bank canine teeth larynx occupational therapist oncologist optician plaque spinal tap stat strep screen violence joints symptoms x-ray yawn. Contagious cough diabetes mellitus...</p>
+                            </div>
+                            <div class="customer__item-user df">
+                                <img src="./assets/imgs/user.jpg" alt="">
+                                <div class="customer__item-user--name df df__flex">
+                                    <span class="text">Ann Smith</span>
+                                    <span class="text">Photographer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-4 c-4">
+                        <div class="customer__item">
+                            <div class="customer__item-icon">
+                                <img src="./assets/imgs/icon-twitch.svg" alt="">
+                                <div class="customer__item-icon--star df">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="customer__item-des">
+                                <p class="text">Blood bank canine teeth larynx occupational therapist oncologist optician plaque spinal tap stat strep screen violence joints symptoms x-ray yawn. Contagious cough diabetes mellitus...</p>
+                            </div>
+                            <div class="customer__item-user df">
+                                <img src="./assets/imgs/user.jpg" alt="">
+                                <div class="customer__item-user--name df df__flex">
+                                    <span class="text">Ann Smith</span>
+                                    <span class="text">Photographer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-4 c-4">
+                        <div class="customer__item">
+                            <div class="customer__item-icon">
+                                <img src="./assets/imgs/icon-twitch.svg" alt="">
+                                <div class="customer__item-icon--star df">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                    <img src="./assets/imgs/icon-star.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="customer__item-des">
+                                <p class="text">Blood bank canine teeth larynx occupational therapist oncologist optician plaque spinal tap stat strep screen violence joints symptoms x-ray yawn. Contagious cough diabetes mellitus...</p>
+                            </div>
+                            <div class="customer__item-user df">
+                                <img src="./assets/imgs/user.jpg" alt="">
+                                <div class="customer__item-user--name df df__flex">
+                                    <span class="text">Ann Smith</span>
+                                    <span class="text">Photographer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- customer section end -->
 
         <!-- footer section start -->
-        <div class="footer container__full">
-            
+        <div class="footer__wrap">
+            <div class="footer container__large">
+                <div class="row">
+                    <div class="col l-6 m-12 c-12">
+                        <div class="footer__contact">
+                            <div class="header__logo df">
+                                <a href="#">Czar Shop</a>
+                                <img src="./assets/imgs/icon-logo.svg" alt="">
+                            </div>
+                            <div class="footer__contact-des">
+                                <p class="text">
+                                    We ara a lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat... 
+                                    <a href="" class="text">
+                                        Read More
+                                    </a>
+                                </p>
+                            </div>
+                            <ul class="footer__contact-list">
+                                <li class="footer__contact-item df">
+                                    <img src="./assets/imgs/phone.svg" alt="">
+                                    <div class="footer__contact-item--details df df__flex">
+                                        <p class="text__style">Have a question?</p>
+                                        <a class="text__style" href="tel:305-246-9248">305-246-9248</a>
+                                    </div>
+                                </li>
+                                <li class="footer__contact-item df">
+                                    <img src="./assets/imgs/mail.svg" alt="">
+                                    <div class="footer__contact-item--details df df__flex">
+                                        <p class="text__style">Contact us at</p>
+                                        <a class="text__style" href="mailto: czarshop@gmail.com">czarshop@gmail.com</a>
+                                    </div>
+                                </li>
+                                <li class="footer__contact-item df">
+                                    <img src="./assets/imgs/map.svg" alt="">
+                                    <div class="footer__contact-item--details df df__flex">
+                                        <p class="text__style">Address</p>
+                                        <a class="text__style" href="">301 Campfire Meriden Uk</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col l-6 m-12 c-12">
+                        <div class="footer__info">
+                            <div class="footer__info-list df">                    
+                                <div class="footer__info-item">
+                                    <h3 class="text__sub">CATEGORIES</h3>
+                                    <ul class="footer__info-item--wrap">
+                                        <li class="footer__info-item--link">
+                                            <a class="text" href="">About us</a>
+                                        </li>
+                                        <li class="footer__info-item--link">
+                                            <a class="text" href="">Blog</a>
+                                        </li>
+                                        <li class="footer__info-item--link">
+                                            <a class="text" href="">Careers</a>
+                                        </li>
+                                        <li class="footer__info-item--link">
+                                            <a class="text" href="">Jobs</a>
+                                        </li>
+                                        <li class="footer__info-item--link">
+                                            <a class="text" href="">In Press</a>
+                                        </li>
+                                    </ul>
+                                </div>  
+                                <div class="footer__info-item">
+                                    <h3 class="text__sub">CUSTOMER</h3>
+                                    <ul class="footer__info-item--wrap">
+                                        <li class="footer__info-item--link">
+                                            <a class="text" href="">Contact us</a>
+                                        </li>
+                                        <li class="footer__info-item--link">
+                                            <a class="text" href="">Online Chat</a>
+                                        </li>
+                                        <li class="footer__info-item--link">
+                                            <a class="text" href="">Whatsapp</a>
+                                        </li>
+                                        <li class="footer__info-item--link">
+                                            <a class="text" href="">Telegram</a>
+                                        </li>
+                                        <li class="footer__info-item--link">
+                                            <a class="text" href="">Ticketing</a>
+                                        </li>
+                                    </ul>
+                                </div>  
+                                <div class="footer__info-item">
+                                    <h3 class="text__sub">MY ACCOUNT</h3>
+                                    <ul class="footer__info-item--wrap">
+                                        <li class="footer__info-item--link">
+                                            <a class="text" href="">About</a>
+                                        </li>
+                                        <li class="footer__info-item--link">
+                                            <a class="text" href="">Manage Deliveries</a>
+                                        </li>
+                                        <li class="footer__info-item--link">
+                                            <a class="text" href="">Orders</a>
+                                        </li>
+                                        <li class="footer__info-item--link">
+                                            <a class="text" href="">Payments</a>
+                                        </li>
+                                        <li class="footer__info-item--link">
+                                            <a class="text" href="">Returns</a>
+                                        </li>
+                                    </ul>
+                                </div>                          
+                            </div>
+                            <div class="footer__info-socials df">
+                                <div class="footer__info-socials--icon df">
+                                    <a href="">
+                                        <img src="./assets/imgs/facebook.svg" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img src="./assets/imgs/twitter.svg" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img src="./assets/imgs/dribbble.svg" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img src="./assets/imgs/instagram.svg" alt="">
+                                    </a>
+                                    <a href="">
+                                        <img src="./assets/imgs/figma.svg" alt="">
+                                    </a>
+                                </div>
+                                <div class="footer__info-socials--text">
+                                    <p class="text">© 2022, All Rights Reserved</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- footer section end -->
+
+        <!-- login section start -->
+        <div class="login container__full none">
+            <div class="app">
+                <h1>Login</h1>
+                <form>
+                    <div class="form-control">
+                        <input type="text" id="username" placeholder="Username" />
+                        <span></span>
+                    </div>
         
+                    <div class="form-control">
+                        <input type="email" id="email" placeholder="Email" />
+                        <span></span>
+                    </div>
+        
+                    <div class="form-control">
+                        <input type="password" id="password" placeholder="Password" />
+                        <span></span>
+                    </div>
+        
+                    <input class="login__input" type="submit" value="Login" />
+                    <div class="signup_link">Not a member? <a href="#">Signup</a></div>
+                </form>
+            </div>
+        </div>
+        <!-- login section end -->
+
+        <!-- register section start -->
+        <div class="register container__full none">
+            <div class="app">
+                <h1>Register</h1>
+                <form>
+                    <div class="form-control">
+                        <input type="text" placeholder="Username" />
+                        <span></span>
+                    </div>
+        
+                    <div class="form-control">
+                        <input type="email"  placeholder="Email" />
+                        <span></span>
+                    </div>
+        
+                    <div class="form-control">
+                        <input type="password" placeholder="Password" />
+                        <span></span>
+                    </div>
+
+                    <div class="form-control">
+                        <input type="password" placeholder="Confirm password" />
+                        <span></span>
+                    </div>
+        
+                    <input type="submit" class="register__input" value="Sign Up" />
+                    <div class="login_link">Sign Up Success....<a href="#">Login</a></div>
+                </form>
+            </div>
+        </div>
+        <!-- register section end -->
     </div>
 </body>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="./assets/slick-1.8.1/slick/slick.min.js"></script>
     <script src="./assets/js/slider.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script>
+        AOS.init(
+            {
+                once: true,
+            }
+        );
+    </script>
 </html>

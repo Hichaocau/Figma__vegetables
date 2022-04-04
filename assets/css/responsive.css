@@ -1,0 +1,215 @@
+/* Pc */
+@media (min-width: 1024px){
+    .hide-on-pc{
+        display: none;
+    }
+}
+
+/* Mobile & Tablet */
+@media (max-width: 1023px){
+    .hide-on-mobile-tablet{
+        display: none;
+    }
+    /* .container__large,
+    .container{
+        padding-right: 20px;
+        padding-left: 20px;
+    } */
+    .btn{
+        padding: 3px 10px;
+        font-size: 1.4rem;
+    }
+    .hero{
+        display: block;
+    }
+    .hero__text{
+        max-width: unset;
+        text-align: center;
+    }
+    .hero__text-header{
+        font-size: 3.5rem;
+    }
+    .header__logo a{
+        margin-top: 0;
+        font-size: 1.8em;
+    }
+    .hero__img img{
+        transform: none;
+    }
+    .category{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .slick-arrow{
+        width: 30px;
+        height: 30px;
+        padding: 0;
+    }
+    .slick-prev {
+        right: 38px;
+    }
+    .category__item {
+        padding: 7px 16px;
+    }
+    .text__header{
+        font-size: 2rem;
+    }
+    .text__sub {
+        font-size: 1.6rem;
+    }
+    .text__style{
+        font-size: 1.4rem;
+    }
+    .text__des{
+        font-size: 1.8rem;
+    }
+    .category__item-img img{
+        margin-bottom: 7px;
+    }
+    .category__fresh-item{
+        margin-bottom: 30px;
+    }
+    .feauted__info-star--list{
+        margin-right: 2px;
+    }
+    .feauted__info-star--list img {
+        transform: scale(0.8);
+        margin-right: 0;
+    }
+    .modal__cart-item{
+        width: 35px;
+        height: 35px;
+    }
+    .modal__cart-input{
+        margin: 0 10px;
+        padding-left: 12px;
+    }
+    .sale{
+        margin-bottom: 40px;
+    }
+    .sale__info-header{
+        font-size: 5rem;
+    }
+    .sale__info{
+        margin: 40px -17px 40px 0;
+        max-width: 360px;
+    }
+    .customer{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .customer__list .slick-arrow{
+        top: -18%;
+    }
+    .customer__header{
+        margin-bottom: 40px;
+    }
+    .customer__item-icon--star img{
+        transform: scale(0.8);
+        margin-right: 2px;
+    }
+    .footer__wrap{
+        padding: 20px 0;
+    }
+    .footer__contact{
+        margin-bottom: 40px;
+        max-width: unset;
+    }
+    .footer__info-socials{
+        margin-top: 40px;
+    }
+    .footer__info-list{
+        margin-left: 0;
+    }
+    .footer__info-socials{
+        margin-left: 0;
+    }
+    .hero__text button{
+        margin: auto;
+    }
+    .feauted__header,
+    .category__header{
+        text-align: center;
+    }
+    .hero__img{
+        margin-top: 20px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px){
+    .hide-on-tablet{
+        display: none;
+    }
+    .header__list{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .delivery__info h2{
+        font-size: 4.5rem;
+    }
+    .delivery__info{
+        margin: 52px 0 80px 57px;
+    }
+    .hero__img{
+        display: flex;
+    }
+    .hero__img img{
+        width: 70%;
+        margin: auto;
+    }
+    .category__fresh-item--text{
+        bottom: 100px;
+    }
+    
+}
+
+/* Mobile */
+@media (max-width: 739px){
+    .hide-on-mobile{
+        display: none;
+    }
+    
+    .header__btn-second{
+        margin-left: 15px;
+    }
+    .hero__text button{
+        width: 120px;
+    }
+    .header{
+        padding-bottom: 40px;
+    }
+    .app{
+        width: 300px;
+    }
+    input[type='submit']{
+        margin-top: 0;
+    }
+    form .form-control{
+        margin: 20px 0;
+    }
+    .category__fresh-item--text button{
+        margin-top: 5px;
+    }
+    .category__fresh-item--text{
+        left: 28px;
+        bottom: 18px;
+    }
+    .delivery__info h2{
+        font-size: 3.5rem;
+    }
+    .delivery{
+        background: url(../imgs/img-delivery.png) no-repeat right center / cover;
+    }
+    .delivery__info {
+        margin: 108px 0 78px 50px;
+    }
+    .footer__info-socials{
+        display: block;
+        text-align: center;
+    }
+    .footer__info-socials--text p {
+        margin-top: 18px;
+    }
+    
+}

@@ -6,6 +6,7 @@
     --subheader-color: #3E4265;
     --des-color: #585C7B;
     --bgc-color: #EBECFE;
+    --style-color: #0D6EFD;
 }
 
 *{
@@ -15,7 +16,6 @@
     text-decoration: none;
     outline: none;
     border: none;
-    transition: all 0.2s linear;
     scroll-behavior: smooth;
 }
 
@@ -38,7 +38,7 @@ body{
 .text{
     font-size: 1.4rem;
     line-height: calc(20/14);
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .text__sub{
@@ -72,7 +72,19 @@ body{
 
 .container {
     width: 100%;
+    /* max-width: 1170px; */
+    max-width: 1210px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: 0 auto;
+}
+
+.container__large {
+    width: 100%;
+    /* max-width: 1130px; */
     max-width: 1170px;
+    padding-right: 20px;
+    padding-left: 20px;
     margin: 0 auto;
 }
 
@@ -93,6 +105,16 @@ body{
 button{
     font-family: 'Manrope', sans-serif;
     cursor: pointer;
+    transition: all 0.2s linear;
+
+}
+
+.bd{
+    border-top: 2px solid #E2E5F1;
+}
+
+.transition{
+    transition: all 0.2s linear;
 }
 
 .btn{
@@ -132,8 +154,7 @@ ul{
     transform: translateX(-35%);
     z-index: 2;
     color: white;
-
-    background-color: #22C55E;
+    background-color: #D3FCD2;
     cursor: pointer;
     border: none;
     padding: 10px 20px;
@@ -146,21 +167,20 @@ ul{
     line-height: 1;
 }
 
+
 .slick-arrow:hover{
-    background-color: #D3FCD2;
-   
+    background-color: #22C55E;
 }
 
 .slick-prev{
     right: 60px;
-
 }
 
 .slick-next{
     right: 0;
 }
 
-.slick-dots{
+/* .slick-dots{
     position: absolute;
     bottom: 316.8px;
     left: 50%;
@@ -169,7 +189,7 @@ ul{
     display: flex !important;
     align-items: center;
     justify-content: center;
-    gap: 0 30px; /* khoảng cách các elements*/
+    gap: 0 30px; 
 }
 
 .slick-dots button{
@@ -180,8 +200,145 @@ ul{
     width: 270px;
     height: 2px;
     transition: all 0.2s ease-in-out;
+} */
+
+
+.slick-dots{
+    position: absolute;
+    /* bottom: 316.8px; */
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    list-style: none;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0 10px; 
+}
+
+.slick-dots button{
+    font-size: 0;
+    background-color: #E2E5F1;
+    border: none;
+    outline: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+}
+
+.slick-dots .slick-active{
+    transition: all 0.8s ease-in;
+
 }
 
 .slick-dots .slick-active button{
     background-color: #22C55E;
+}
+
+/* login============================================================ */
+.app {
+	position: absolute;
+	top: 7%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	background: white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+}
+
+.app h1 {
+	text-align: center;
+	padding-top: 40px;
+}
+
+.app form {
+	padding: 0 40px;
+}
+
+form .form-control {
+	position: relative;
+	border-bottom: 2px solid #adadad;
+	margin: 40px 0;
+}
+
+.form-control.success {
+	border-bottom-color: #2691d9;
+}
+
+.form-control.error {
+	border-bottom-color: #e74c3c;
+}
+
+.form-control input {
+	width: 100%;
+	height: 40px;
+	font-size: 16px;
+	border: none;
+	background: none;
+	outline: none;
+}
+
+/* small {
+	position: absolute;
+	left: 0;
+	top: 100%;
+	margin-top: 3px;
+	color: #e74c3c;
+    font-size: 1.4rem;
+    line-height: 1.5;
+} */
+
+.form-control span::before {
+	content: '';
+	position: absolute;
+	top: 40px;
+	left: 0;
+	width: 0%;
+	height: 2px;
+	background: #2691d9;
+	transition: 0.3s;
+}
+
+.form-control input:focus ~ span::before {
+	width: 100%;
+}
+
+input[type='submit'] {
+	margin-top: 20px;
+	width: 100%;
+	height: 50px;
+	border: 1px solid;
+	background: #2691d9;
+	border-radius: 25px;
+	font-size: 18px;
+	color: #e9f4fb;
+	font-weight: 700;
+	cursor: pointer;
+	outline: none;
+	transition: 0.5s;
+}
+
+input[type='submit']:hover {
+	background-color: #08609a;
+}
+
+.login_link,
+.signup_link {
+	margin: 35px 0;
+	text-align: center;
+	font-size: 16px;
+	color: #666666;
+}
+
+.login_link a,
+.signup_link a {
+	color: #2691d9;
+	text-decoration: none;
+}
+
+.login_link a:hover,
+.signup_link a:hover {
+	text-decoration: underline;
 }
