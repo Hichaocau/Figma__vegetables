@@ -24,38 +24,36 @@
         <div class="header__wrap transition">
             <div class="header container">
                 <div class="header__list-wrap df">
-                    <div class="header__logo df">
+                    <div class="header__logo df df__unset">
                         <a href="#">Czar Shop</a>
                         <img src="./assets/imgs/icon-logo.svg" alt="">
                     </div>
                     <div class="header__list-btn df">
-                        <ul class="header__list header__list-pc df">
-                            <li class="header__item df df__flex">
+                        <ul class="header__list df">
+                            <li class="header__item ">
                                 <div class="header__item-home df">
                                     <a class="text header__item-active" href="#">Home</a>
                                     <img src="./assets/imgs/arrow-down.svg" alt="">
-                                    <div class="header__item-navbar">
-                                        <ul class="header__item-navbar--list">
-                                            <li class="header__item-navbar--item">
-                                                <a class="text" href="#save">Save up</a>
-                                            </li>
-                                            <li class="header__item-navbar--item">
-                                                <a class="text" href="#category">Category</a>
-                                            </li>
-                                        </ul>
-                                    </div>
                                 </div>
+                                <ul class="header__item-navbar">
+                                    <li class="header__item-navbar--item">
+                                        <a class="text" href="#save">Save up</a>
+                                    </li>
+                                    <li class="header__item-navbar--item">
+                                        <a class="text" href="#category">Category</a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li class="header__item df">
+                            <li class="header__item">
                                 <a class="text" href="#shop">Shop</a>
                             </li>
-                            <li class="header__item df">
+                            <li class="header__item">
                                 <a class="text" href="#blog">Blog</a>
                             </li>
-                            <li class="header__item df">
+                            <li class="header__item">
                                 <a class="text" href="#page">Page</a>
                             </li>
-                            <li class="header__item df">
+                            <li class="header__item">
                                 <a class="text" href="#vendor">Vendor</a>
                             </li>
                         </ul>
@@ -72,15 +70,13 @@
             
             <!-- hero section start -->
             <div class="hero container" id="save">
-                <div class="hero__text df df__flex" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div class="hero__text df df__flex">
                     <p class="text__sub hero__text-subheader">Save up 30% off</p>
                     <h1 class=" hero__text-header">Bengal Vegetable Farm Organic 100%</h1>
                     <div class="text hero__text-des">Shujaa is a mobile platform that enables you to connect with your family and friends anywhere at anytime.</div>
-                    <button class="btn">
-                        <a href="#shop">Shop now</a>
-                    </button>
+                    <a class="btn" href="#shop">Shop now</a>
                 </div>
-                <div class="hero__img transition" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div class="hero__img transition">
                     <img src="./assets/imgs/img-heroo.png" alt="">
                 </div>
             </div>
@@ -170,11 +166,10 @@
                             </div>
                             <div class="category__fresh-item--text">
                                 <span class="text">Fresh Fruit</span>
-                                <p class="text__des">Fresh Summer With</p>
-                                <p class="text__des">Just $200.99</p>
-                                <button class="text">
-                                    <a href="#shop">Shop now</a>                             
-                                </button>
+                                <p class="text__des">Fresh Summer With 
+                                   <br>
+                                    Just $200.99</p>
+                                <a class="text" href="#shop">Shop now</a>                             
                             </div>
                         </div>
                     </div>
@@ -186,11 +181,10 @@
                             </div>
                             <div class="category__fresh-item--text category__fresh-item--text-second">
                                 <span class="text">Tasty Healthy</span>
-                                <p class="text__des">Fresh</p>
-                                <p class="text__des">Vegetables</p>
-                                <button class="text">
-                                    <a href="#shop">Shop now</a>                             
-                                </button>
+                                <p class="text__des">Fresh 
+                                    <br>
+                                    Vegetables</p>
+                                <a class="text" href="#shop">Shop now</a>                             
                             </div>
                         </div>
                     </div>
@@ -218,13 +212,13 @@
                             </div>
                             <div class="modal__cart-wrap df">
                                 <div class="modal__cart df">
-                                    <div class="modal__cart-item modal__cart-plus df">
+                                    <button class="modal__cart-item modal__cart-plus df">
                                         <img src="./assets/imgs/plus.svg" alt="">
-                                    </div>
+                                    </button>
                                     <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
-                                    <div class="modal__cart-item modal__cart-minus df">
+                                    <button class="modal__cart-item modal__cart-minus df">
                                         <img src="./assets/imgs/minus.svg" alt="">
-                                    </div>
+                                    </button>
                                 </div>
                             </div>  
                         </div>
@@ -245,7 +239,7 @@
                                 <p class="text__style feauted__info-price--old">$300.00</p>
                             </div>
                             <button class="feauted__info-btn df__center df">
-                                <a class="text__style" href="">Add to Cart</a>
+                                <span class="text__style">Add to Cart</span>
                                 <img src="./assets/imgs/icon-cart.svg" alt="">
                             </button>
                         </div>
@@ -262,13 +256,13 @@
                             </div>
                             <div class="modal__cart-wrap df">
                                 <div class="modal__cart df">
-                                    <div class="modal__cart-item modal__cart-plus df">
+                                    <button class="modal__cart-item modal__cart-plus df">
                                         <img src="./assets/imgs/plus.svg" alt="">
-                                    </div>
+                                    </button>
                                     <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
-                                    <div class="modal__cart-item modal__cart-minus df">
+                                    <button class="modal__cart-item modal__cart-minus df">
                                         <img src="./assets/imgs/minus.svg" alt="">
-                                    </div>
+                                    </button>
                                 </div>
                             </div>  
                         </div>                      
@@ -289,7 +283,7 @@
                                 <p class="text__style feauted__info-price--old">$300.00</p>
                             </div>
                             <button class="feauted__info-btn df__center df">
-                                <a class="text__style" href="">Add to Cart</a>
+                                <span class="text__style">Add to Cart</span>
                                 <img src="./assets/imgs/icon-cart.svg" alt="">
                             </button>
                         </div>
@@ -306,13 +300,13 @@
                             </div>
                             <div class="modal__cart-wrap df">
                                 <div class="modal__cart df">
-                                    <div class="modal__cart-item modal__cart-plus df">
+                                    <button class="modal__cart-item modal__cart-plus df">
                                         <img src="./assets/imgs/plus.svg" alt="">
-                                    </div>
+                                    </button>
                                     <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
-                                    <div class="modal__cart-item modal__cart-minus df">
+                                    <button class="modal__cart-item modal__cart-minus df">
                                         <img src="./assets/imgs/minus.svg" alt="">
-                                    </div>
+                                    </button>
                                 </div>
                             </div>  
                         </div>     
@@ -333,7 +327,7 @@
                                 <p class="text__style feauted__info-price--old">$300.00</p>
                             </div>
                             <button class="feauted__info-btn df__center df">
-                                <a class="text__style" href="">Add to Cart</a>
+                                <span class="text__style">Add to Cart</span>
                                 <img src="./assets/imgs/icon-cart.svg" alt="">
                             </button>
                         </div>
@@ -350,13 +344,13 @@
                             </div>
                             <div class="modal__cart-wrap df">
                                 <div class="modal__cart df">
-                                    <div class="modal__cart-item modal__cart-plus df">
+                                    <button class="modal__cart-item modal__cart-plus df">
                                         <img src="./assets/imgs/plus.svg" alt="">
-                                    </div>
+                                    </button>
                                     <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
-                                    <div class="modal__cart-item modal__cart-minus df">
+                                    <button class="modal__cart-item modal__cart-minus df">
                                         <img src="./assets/imgs/minus.svg" alt="">
-                                    </div>
+                                    </button>
                                 </div>
                             </div>  
                         </div>   
@@ -377,7 +371,7 @@
                                 <p class="text__style feauted__info-price--old">$300.00</p>
                             </div>
                             <button class="feauted__info-btn df__center df">
-                                <a class="text__style" href="">Add to Cart</a>
+                                <span class="text__style">Add to Cart</span>
                                 <img src="./assets/imgs/icon-cart.svg" alt="">
                             </button>
                         </div>
@@ -394,13 +388,13 @@
                             </div>
                             <div class="modal__cart-wrap df">
                                 <div class="modal__cart df">
-                                    <div class="modal__cart-item modal__cart-plus df">
+                                    <button class="modal__cart-item modal__cart-plus df">
                                         <img src="./assets/imgs/plus.svg" alt="">
-                                    </div>
+                                    </button>
                                     <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
-                                    <div class="modal__cart-item modal__cart-minus df">
+                                    <button class="modal__cart-item modal__cart-minus df">
                                         <img src="./assets/imgs/minus.svg" alt="">
-                                    </div>
+                                    </button>
                                 </div>
                             </div>  
                         </div>   
@@ -421,7 +415,7 @@
                                 <p class="text__style feauted__info-price--old">$300.00</p>
                             </div>
                             <button class="feauted__info-btn df__center df">
-                                <a class="text__style" href="">Add to Cart</a>
+                                <span class="text__style">Add to Cart</span>
                                 <img src="./assets/imgs/icon-cart.svg" alt="">
                             </button>
                         </div>
@@ -438,13 +432,13 @@
                             </div>
                             <div class="modal__cart-wrap df">
                                 <div class="modal__cart df">
-                                    <div class="modal__cart-item modal__cart-plus df">
+                                    <button class="modal__cart-item modal__cart-plus df">
                                         <img src="./assets/imgs/plus.svg" alt="">
-                                    </div>
+                                    </button>
                                     <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
-                                    <div class="modal__cart-item modal__cart-minus df">
+                                    <button class="modal__cart-item modal__cart-minus df">
                                         <img src="./assets/imgs/minus.svg" alt="">
-                                    </div>
+                                    </button>
                                 </div>
                             </div>  
                         </div>   
@@ -465,7 +459,7 @@
                                 <p class="text__style feauted__info-price--old">$300.00</p>
                             </div>
                             <button class="feauted__info-btn df__center df">
-                                <a class="text__style" href="">Add to Cart</a>
+                                <span class="text__style">Add to Cart</span>
                                 <img src="./assets/imgs/icon-cart.svg" alt="">
                             </button>
                         </div>
@@ -482,13 +476,13 @@
                             </div>
                             <div class="modal__cart-wrap df">
                                 <div class="modal__cart df">
-                                    <div class="modal__cart-item modal__cart-plus df">
+                                    <button class="modal__cart-item modal__cart-plus df">
                                         <img src="./assets/imgs/plus.svg" alt="">
-                                    </div>
+                                    </button>
                                     <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
-                                    <div class="modal__cart-item modal__cart-minus df">
+                                    <button class="modal__cart-item modal__cart-minus df">
                                         <img src="./assets/imgs/minus.svg" alt="">
-                                    </div>
+                                    </button>
                                 </div>
                             </div>  
                         </div>   
@@ -509,7 +503,7 @@
                                 <p class="text__style feauted__info-price--old">$300.00</p>
                             </div>
                             <button class="feauted__info-btn df__center df">
-                                <a class="text__style" href="">Add to Cart</a>
+                                <span class="text__style">Add to Cart</span>
                                 <img src="./assets/imgs/icon-cart.svg" alt="">
                             </button>
                         </div>
@@ -530,7 +524,7 @@
                     </p>
                     <p class="sale__info-des text__des">Your daily dose of nutrition. No added suger. No Preservatives. No flavour & colour</p>
                     <div class="sale__info-time">
-                        <ul class="sale__info-time--list df countdown">
+                        <ul class="sale__info-time--list df df__unset countdown">
                             <li class="sale__info-time--item sale__days">
                                 <div class="sale__info-number text__des days">68</div>
                                 <span class="text">Days</span>
@@ -549,11 +543,9 @@
                             </li>
                         </ul>
                     </div>
-                    <button class="sale__info-btn">
-                        <a href="#shop" class="text__style">
-                            Shop now
-                        </a>
-                    </button>
+                    <a class="sale__info-btn text__style"  href="#shop">
+                        Shop now
+                    </a>
                 </div>
             </div>
         </div>
@@ -563,12 +555,12 @@
         <div class="product feauted container" id="shop">
             <div class="product__header category__header df">
                 <h2 class="text__header">Hot Product</h2>
-                <div class="product__shop df">
-                    <a href="" class="text__style">Shop all</a>
+                <a href="#shop" class="product__shop df">
+                    <span class="text__style">Shop all</span>
                     <button class="product__shop-icon df">
                         <img src="./assets/imgs/arrow-right.svg" alt="">
                     </button>
-                </div>
+                </a>
             </div>
             <div class="product__options">
                 <ul class="product__options-list df">
@@ -603,13 +595,13 @@
                             </div>
                             <div class="modal__cart-wrap df">
                                 <div class="modal__cart df">
-                                    <div class="modal__cart-item modal__cart-plus df">
+                                    <button class="modal__cart-item modal__cart-plus df">
                                         <img src="./assets/imgs/plus.svg" alt="">
-                                    </div>
+                                    </button>
                                     <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
-                                    <div class="modal__cart-item modal__cart-minus df">
+                                    <button class="modal__cart-item modal__cart-minus df">
                                         <img src="./assets/imgs/minus.svg" alt="">
-                                    </div>
+                                    </button>
                                 </div>
                             </div>  
                         </div>     
@@ -630,7 +622,7 @@
                                 <p class="text__style feauted__info-price--old">$300.00</p>
                             </div>
                             <button class="feauted__info-btn df__center df">
-                                <a class="text__style" href="">Add to Cart</a>
+                                <span class="text__style">Add to Cart</span>
                                 <img src="./assets/imgs/icon-cart.svg" alt="">
                             </button>
                         </div>
@@ -647,13 +639,13 @@
                             </div>
                             <div class="modal__cart-wrap df">
                                 <div class="modal__cart df">
-                                    <div class="modal__cart-item modal__cart-plus df">
+                                    <button class="modal__cart-item modal__cart-plus df">
                                         <img src="./assets/imgs/plus.svg" alt="">
-                                    </div>
+                                    </button>
                                     <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
-                                    <div class="modal__cart-item modal__cart-minus df">
+                                    <button class="modal__cart-item modal__cart-minus df">
                                         <img src="./assets/imgs/minus.svg" alt="">
-                                    </div>
+                                    </button>
                                 </div>
                             </div>  
                         </div>     
@@ -674,7 +666,7 @@
                                 <p class="text__style feauted__info-price--old">$300.00</p>
                             </div>
                             <button class="feauted__info-btn df__center df">
-                                <a class="text__style" href="">Add to Cart</a>
+                                <span class="text__style">Add to Cart</span>
                                 <img src="./assets/imgs/icon-cart.svg" alt="">
                             </button>
                         </div>
@@ -691,13 +683,13 @@
                             </div>
                             <div class="modal__cart-wrap df">
                                 <div class="modal__cart df">
-                                    <div class="modal__cart-item modal__cart-plus df">
+                                    <button class="modal__cart-item modal__cart-plus df">
                                         <img src="./assets/imgs/plus.svg" alt="">
-                                    </div>
+                                    </button>
                                     <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
-                                    <div class="modal__cart-item modal__cart-minus df">
+                                    <button class="modal__cart-item modal__cart-minus df">
                                         <img src="./assets/imgs/minus.svg" alt="">
-                                    </div>
+                                    </button>
                                 </div>
                             </div>  
                         </div>     
@@ -718,7 +710,7 @@
                                 <p class="text__style feauted__info-price--old">$300.00</p>
                             </div>
                             <button class="feauted__info-btn df__center df">
-                                <a class="text__style" href="">Add to Cart</a>
+                                <span class="text__style">Add to Cart</span>
                                 <img src="./assets/imgs/icon-cart.svg" alt="">
                             </button>
                         </div>
@@ -735,13 +727,13 @@
                             </div>
                             <div class="modal__cart-wrap df">
                                 <div class="modal__cart df">
-                                    <div class="modal__cart-item modal__cart-plus df">
+                                    <button class="modal__cart-item modal__cart-plus df">
                                         <img src="./assets/imgs/plus.svg" alt="">
-                                    </div>
+                                    </button>
                                     <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
-                                    <div class="modal__cart-item modal__cart-minus df">
+                                    <button class="modal__cart-item modal__cart-minus df">
                                         <img src="./assets/imgs/minus.svg" alt="">
-                                    </div>
+                                    </button>
                                 </div>
                             </div>  
                         </div>     
@@ -762,7 +754,7 @@
                                 <p class="text__style feauted__info-price--old">$300.00</p>
                             </div>
                             <button class="feauted__info-btn df__center df">
-                                <a class="text__style" href="">Add to Cart</a>
+                                <span class="text__style">Add to Cart</span>
                                 <img src="./assets/imgs/icon-cart.svg" alt="">
                             </button>
                         </div>
@@ -784,13 +776,13 @@
                             </div>
                             <div class="modal__cart-wrap df">
                                 <div class="modal__cart df">
-                                    <div class="modal__cart-item modal__cart-plus df">
+                                    <button class="modal__cart-item modal__cart-plus df">
                                         <img src="./assets/imgs/plus.svg" alt="">
-                                    </div>
+                                    </button>
                                     <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
-                                    <div class="modal__cart-item modal__cart-minus df">
+                                    <button class="modal__cart-item modal__cart-minus df">
                                         <img src="./assets/imgs/minus.svg" alt="">
-                                    </div>
+                                    </button>
                                 </div>
                             </div>  
                         </div>     
@@ -811,7 +803,7 @@
                                 <p class="text__style feauted__info-price--old">$300.00</p>
                             </div>
                             <button class="feauted__info-btn df__center df">
-                                <a class="text__style" href="">Add to Cart</a>
+                                <span class="text__style">Add to Cart</span>
                                 <img src="./assets/imgs/icon-cart.svg" alt="">
                             </button>
                         </div>
@@ -833,13 +825,13 @@
                             </div>
                             <div class="modal__cart-wrap df">
                                 <div class="modal__cart df">
-                                    <div class="modal__cart-item modal__cart-plus df">
+                                    <button class="modal__cart-item modal__cart-plus df">
                                         <img src="./assets/imgs/plus.svg" alt="">
-                                    </div>
+                                    </button>
                                     <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
-                                    <div class="modal__cart-item modal__cart-minus df">
+                                    <button class="modal__cart-item modal__cart-minus df">
                                         <img src="./assets/imgs/minus.svg" alt="">
-                                    </div>
+                                    </button>
                                 </div>
                             </div>  
                         </div>     
@@ -860,7 +852,7 @@
                                 <p class="text__style feauted__info-price--old">$300.00</p>
                             </div>
                             <button class="feauted__info-btn df__center df">
-                                <a class="text__style" href="">Add to Cart</a>
+                                <span class="text__style">Add to Cart</span>
                                 <img src="./assets/imgs/icon-cart.svg" alt="">
                             </button>
                         </div>
@@ -877,13 +869,13 @@
                             </div>
                             <div class="modal__cart-wrap df">
                                 <div class="modal__cart df">
-                                    <div class="modal__cart-item modal__cart-plus df">
+                                    <button class="modal__cart-item modal__cart-plus df">
                                         <img src="./assets/imgs/plus.svg" alt="">
-                                    </div>
+                                    </button>
                                     <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
-                                    <div class="modal__cart-item modal__cart-minus df">
+                                    <button class="modal__cart-item modal__cart-minus df">
                                         <img src="./assets/imgs/minus.svg" alt="">
-                                    </div>
+                                    </button>
                                 </div>
                             </div>  
                         </div>     
@@ -904,7 +896,7 @@
                                 <p class="text__style feauted__info-price--old">$300.00</p>
                             </div>
                             <button class="feauted__info-btn df__center df">
-                                <a class="text__style" href="">Add to Cart</a>
+                                <span class="text__style">Add to Cart</span>
                                 <img src="./assets/imgs/icon-cart.svg" alt="">
                             </button>
                         </div>
@@ -926,13 +918,13 @@
                             </div>
                             <div class="modal__cart-wrap df">
                                 <div class="modal__cart df">
-                                    <div class="modal__cart-item modal__cart-plus df">
+                                    <button class="modal__cart-item modal__cart-plus df">
                                         <img src="./assets/imgs/plus.svg" alt="">
-                                    </div>
+                                    </button>
                                     <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
-                                    <div class="modal__cart-item modal__cart-minus df">
+                                    <button class="modal__cart-item modal__cart-minus df">
                                         <img src="./assets/imgs/minus.svg" alt="">
-                                    </div>
+                                    </button>
                                 </div>
                             </div>  
                         </div>     
@@ -953,7 +945,7 @@
                                 <p class="text__style feauted__info-price--old">$300.00</p>
                             </div>
                             <button class="feauted__info-btn df__center df">
-                                <a class="text__style" href="">Add to Cart</a>
+                                <span class="text__style">Add to Cart</span>
                                 <img src="./assets/imgs/icon-cart.svg" alt="">
                             </button>
                         </div>
@@ -970,13 +962,13 @@
                             </div>
                             <div class="modal__cart-wrap df">
                                 <div class="modal__cart df">
-                                    <div class="modal__cart-item modal__cart-plus df">
+                                    <button class="modal__cart-item modal__cart-plus df">
                                         <img src="./assets/imgs/plus.svg" alt="">
-                                    </div>
+                                    </button>
                                     <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
-                                    <div class="modal__cart-item modal__cart-minus df">
+                                    <button class="modal__cart-item modal__cart-minus df">
                                         <img src="./assets/imgs/minus.svg" alt="">
-                                    </div>
+                                    </button>
                                 </div>
                             </div>  
                         </div>     
@@ -997,7 +989,7 @@
                                 <p class="text__style feauted__info-price--old">$300.00</p>
                             </div>
                             <button class="feauted__info-btn df__center df">
-                                <a class="text__style" href="">Add to Cart</a>
+                                <span class="text__style">Add to Cart</span>
                                 <img src="./assets/imgs/icon-cart.svg" alt="">
                             </button>
                         </div>
@@ -1019,13 +1011,13 @@
                             </div>
                             <div class="modal__cart-wrap df">
                                 <div class="modal__cart df">
-                                    <div class="modal__cart-item modal__cart-plus df">
+                                    <button class="modal__cart-item modal__cart-plus df">
                                         <img src="./assets/imgs/plus.svg" alt="">
-                                    </div>
+                                    </button>
                                     <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
-                                    <div class="modal__cart-item modal__cart-minus df">
+                                    <button class="modal__cart-item modal__cart-minus df">
                                         <img src="./assets/imgs/minus.svg" alt="">
-                                    </div>
+                                    </button>
                                 </div>
                             </div>  
                         </div>     
@@ -1046,7 +1038,7 @@
                                 <p class="text__style feauted__info-price--old">$300.00</p>
                             </div>
                             <button class="feauted__info-btn df__center df">
-                                <a class="text__style" href="">Add to Cart</a>
+                                <span class="text__style">Add to Cart</span>
                                 <img src="./assets/imgs/icon-cart.svg" alt="">
                             </button>
                         </div>
@@ -1063,13 +1055,13 @@
                             </div>
                             <div class="modal__cart-wrap df">
                                 <div class="modal__cart df">
-                                    <div class="modal__cart-item modal__cart-plus df">
+                                    <button class="modal__cart-item modal__cart-plus df">
                                         <img src="./assets/imgs/plus.svg" alt="">
-                                    </div>
+                                    </button>
                                     <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
-                                    <div class="modal__cart-item modal__cart-minus df">
+                                    <button class="modal__cart-item modal__cart-minus df">
                                         <img src="./assets/imgs/minus.svg" alt="">
-                                    </div>
+                                    </button>
                                 </div>
                             </div>  
                         </div>     
@@ -1090,7 +1082,7 @@
                                 <p class="text__style feauted__info-price--old">$300.00</p>
                             </div>
                             <button class="feauted__info-btn df__center df">
-                                <a class="text__style" href="">Add to Cart</a>
+                                <span class="text__style">Add to Cart</span>
                                 <img src="./assets/imgs/icon-cart.svg" alt="">
                             </button>
                         </div>
@@ -1107,13 +1099,13 @@
                             </div>
                             <div class="modal__cart-wrap df">
                                 <div class="modal__cart df">
-                                    <div class="modal__cart-item modal__cart-plus df">
+                                    <button class="modal__cart-item modal__cart-plus df">
                                         <img src="./assets/imgs/plus.svg" alt="">
-                                    </div>
+                                    </button>
                                     <input type="text" class="modal__cart-input df modal__cart-item text__sub" placeholder="1">
-                                    <div class="modal__cart-item modal__cart-minus df">
+                                    <button class="modal__cart-item modal__cart-minus df">
                                         <img src="./assets/imgs/minus.svg" alt="">
-                                    </div>
+                                    </button>
                                 </div>
                             </div>  
                         </div>     
@@ -1134,7 +1126,7 @@
                                 <p class="text__style feauted__info-price--old">$300.00</p>
                             </div>
                             <button class="feauted__info-btn df__center df">
-                                <a class="text__style" href="">Add to Cart</a>
+                                <span class="text__style">Add to Cart</span>
                                 <img src="./assets/imgs/icon-cart.svg" alt="">
                             </button>
                         </div>
@@ -1149,8 +1141,9 @@
         <div class="delivery container__full" id="vendor">
             <div class="delivery__info-wrap container">
                 <div class="delivery__info">
-                    <h2 class="delivery__info-header">Free Home</h2>
-                    <h2 class="delivery__info-header">Delivery in 24h</h2>
+                    <h2 class="delivery__info-header">Free Home
+                        <br>
+                        Delivery in 24h</h2>
                     <p class="delivery__info-des text__style">Nam commodo suscipit quam. Nunc nulla. Aenean ut eros et nisl sagittis</p>
                     <button class="delivery__info-btn">
                         <a href="" class="text__style">
@@ -1337,21 +1330,21 @@
                                 </p>
                             </div>
                             <ul class="footer__contact-list">
-                                <li class="footer__contact-item df">
+                                <li class="footer__contact-item df df__unset">
                                     <img src="./assets/imgs/phone.svg" alt="">
                                     <div class="footer__contact-item--details df df__flex">
                                         <p class="text__style">Have a question?</p>
                                         <a class="text__style" href="tel:305-246-9248">305-246-9248</a>
                                     </div>
                                 </li>
-                                <li class="footer__contact-item df">
+                                <li class="footer__contact-item df df__unset">
                                     <img src="./assets/imgs/mail.svg" alt="">
                                     <div class="footer__contact-item--details df df__flex">
                                         <p class="text__style">Contact us at</p>
                                         <a class="text__style" href="mailto: czarshop@gmail.com">czarshop@gmail.com</a>
                                     </div>
                                 </li>
-                                <li class="footer__contact-item df">
+                                <li class="footer__contact-item df df__unset">
                                     <img src="./assets/imgs/map.svg" alt="">
                                     <div class="footer__contact-item--details df df__flex">
                                         <p class="text__style">Address</p>
@@ -1513,6 +1506,9 @@
         </div>
         <!-- register section end -->
     </div>
+    <!-- overlay section start -->
+    <div class="overlay hide-on-pc none"></div>
+    <!-- overlay section end -->
 </body>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

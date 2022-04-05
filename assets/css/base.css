@@ -100,6 +100,10 @@ body{
     justify-content: center;
 }
 
+.df__unset{
+    justify-content: unset;
+}
+
 .df__flex{
     flex-direction: column
 }
@@ -146,11 +150,11 @@ ul{
 .slick-arrow{
     /* abscentery code tắt */
     position: absolute;
-    top: -21%;
+    top: -19%;
     transform: translateX(-35%);
     z-index: 2;
     color: white;
-    background-color: #D3FCD2;
+    background-color: #22C55E;
     cursor: pointer;
     border: none;
     padding: 10px 20px;
@@ -163,16 +167,6 @@ ul{
     line-height: 1;
 }
 
-
-/* .slick-arrow:hover{
-    background-color: #22C55E;
-} */
-
-.arrow__active{
-    background-color: #22C55E;
-}
-
-
 .slick-prev{
     right: 60px;
 }
@@ -181,32 +175,8 @@ ul{
     right: 0;
 }
 
-/* .slick-dots{
-    position: absolute;
-    bottom: 316.8px;
-    left: 50%;
-    transform: translateX(-50%);
-    list-style: none;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    gap: 0 30px; 
-}
-
-.slick-dots button{
-    font-size: 0;
-    background-color: #E2E5F1;
-    border: none;
-    outline: none;
-    width: 270px;
-    height: 2px;
-    transition: all 0.2s ease-in-out;
-} */
-
-
 .slick-dots{
     position: absolute;
-    /* bottom: 316.8px; */
     bottom: -25px;
     left: 50%;
     transform: translateX(-50%);
@@ -235,6 +205,11 @@ ul{
 
 .slick-dots .slick-active button{
     background-color: #22C55E;
+}
+
+
+.slick-disabled{
+    background-color: #D3FCD2;
 }
 
 /* login============================================================ */

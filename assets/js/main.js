@@ -136,70 +136,52 @@ function buyProduct(){
 
 buyProduct()
 
+
 // click icon menu
 function headerMenu(){
     const iconMenu = document.querySelector('.header__menu i')
-    const headerNavbar = document.querySelector('.header__navbar')
+    const navbar = document.querySelector('.header__list-btn')
+    const overlay = document.querySelector('.overlay')
+
+
+    // iconMenu.addEventListener('click', () => {
+
+    //     if(window.innerWidth <= 1030){
+    //         iconMenu.classList.toggle('fa-xmark')
+    //         overlay.classList.toggle('none')
+    //         navbar.style.transform = 'translateX(0)'
+    //         navbar.style.transition = 'all 0.3s linear'
+    //     }
+    //     else{
+    //         navbar.style.transform = 'translateX(100%)'
+    //     }
+    // })
+
+    // overlay.addEventListener('click', () => {
+
+    //     if(window.innerWidth <= 1030){
+    //         iconMenu.classList.toggle('fa-xmark')
+    //         overlay.classList.toggle('none')
+    //         navbar.style.transform = 'translateX(100%)'
+    //     }
+    //     else{
+    //         navbar.style.transform = 'translateX(0)'
+    //     }
+    // })
+    
     iconMenu.addEventListener('click', () => {
         iconMenu.classList.toggle('fa-xmark')
-        headerNavbar.classList.toggle('header__navbar-active')
+        overlay.classList.toggle('none')
+        navbar.style.transform = 'translateX(0)'
+        navbar.style.transition = 'all 0.3s linear'
     })
 
-    // click icon arrow down 
-    const navbarHome = document.querySelector('.header__navbar .header__navbar-home')
-    const subNavbar = document.querySelector('.header__navbar .header__item-navbar')
-    const iconDown = document.querySelector('.header__navbar .header__navbar-home img')
-    navbarHome.addEventListener('click', () => {
-        subNavbar.classList.toggle('header__item-navbar--active')
-        iconDown.classList.toggle('transform')
+    overlay.addEventListener('click', () => {
+        iconMenu.classList.toggle('fa-xmark')
+        overlay.classList.toggle('none')
+        navbar.style.transform = 'translateX(100%)'
     })
 }
 headerMenu()
 
-// active arrow button
 
-// $(document).ready(function(){ 
-//     // console.log(document.querySelector('.slick-arrow'));
-
-//     function arrowButton() {
-    
-//         const arrowPrev = document.querySelector('.category .category__list-wrap .slick-prev')
-//         const arrowNext = document.querySelector('.category .category__list-wrap .slick-next')
-        
-//         const categoryList = document.querySelectorAll('.category .category__list-wrap .category__item')
-
-//         let i = 0;
-
-//         arrowNext.addEventListener('click', () => {
-//             console.log(i, 'hi')
-            
-//             if( i >= 0){
-//                 i++;
-//                 arrowNext.classList.add('arrow__active')
-//                 arrowPrev.classList.add('arrow__active')
-//             }
-//             if( i >= 4){
-//                 i = 4;
-//                 arrowPrev.classList.add('arrow__active')
-//                 arrowNext.classList.remove('arrow__active')
-//             }
-//         })   
-
-//         arrowPrev.addEventListener('click', () => {
-//             console.log(i)
-
-//             if( i <= 4){
-//                 i--;
-//                 // arrowPrev.classList.add('arrow__active')
-//                 arrowNext.classList.add('arrow__active')
-//             }
-//             if( i <= 0){
-//                 i = 0;
-//                 arrowNext.classList.add('arrow__active')
-//                 arrowPrev.classList.remove('arrow__active')
-//             }
-//         })  
-        
-//     }
-//     arrowButton()
-// })
