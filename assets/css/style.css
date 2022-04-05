@@ -77,65 +77,6 @@
     transition: all 0.2s linear;
 }
 
-.header__navbar{
-    position: absolute;
-    top: 100%;
-    right: 0;
-    left: 0;
-    background-color: #F9FAFB;
-    box-shadow: inset 0px -1px 0px #ececec;
-    clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
-    transition: all 0.4s linear;
-    z-index: 10;
-}
-
-.header__navbar-active{
-    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-}
-
-.header__navbar .header__list{
-    margin: 0;
-    width: 100%;
-}
-
-.header__navbar .header__list .header__item{
-    justify-content: unset;
-    align-items: unset;
-    margin: 10px 0;
-}
-
-.header__navbar .header__list .header__item a{
-    font-weight: 500;
-}
-
-.header__navbar .header__item-home{
-    overflow: hidden;
-}
-
-.header__navbar .header__item-navbar{
-    position: unset;
-    top: unset;
-    height: 0;
-}
-
-.header__item-navbar--active{
-    height: 50px !important;
-    display: block !important;
-}
-
-.header__navbar .header__item-navbar a:nth-child(2){
-    margin-top: 0;
-}
-
-.header__navbar .header__item-home::after{
-    display: none;
-}
-
-.header__navbar .header__item-navbar a{
-    margin: 10px 0;
-    display: block;
-}
-
 .header__menu .fa-xmark{
     transform: rotate(180deg);
 }
@@ -247,6 +188,16 @@
     padding: 30px 47px;
     text-align: center;
     background-color: #EBECFE;
+    box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+    border-radius: 4px;
+}
+
+.mb40{
+    margin-bottom: 40px;
+}
+
+.mb60{
+    margin-bottom: 60px;
 }
 
 .category__item-img img{
@@ -294,6 +245,7 @@
 
 .category__fresh-item--text button:hover{
     background-color: var(--style-color);
+    border: 1px solid var(--style-color);
 }
 
 .category__fresh-item--text-second{
@@ -420,7 +372,7 @@
 
 .sale__info{
     max-width: 447px;
-    margin: 106px 182px 105px 0;
+    margin: 106px 35px 105px 0;
 }
 
 .sale__info-header{
@@ -493,7 +445,7 @@
 
 .delivery__info{
     max-width: 418px;
-    margin: 199px 0 210px 210px;
+    margin: 199px 0 210px 30px;
 }
 
 .delivery__info h2{
@@ -805,7 +757,7 @@
     display: block;
 }
 
-.header__item-navbar a:nth-child(2){
+.header__item-navbar li:nth-child(2){
     margin-top: 8px;
 }
 

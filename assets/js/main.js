@@ -155,3 +155,51 @@ function headerMenu(){
     })
 }
 headerMenu()
+
+// active arrow button
+
+// $(document).ready(function(){ 
+//     // console.log(document.querySelector('.slick-arrow'));
+
+//     function arrowButton() {
+    
+//         const arrowPrev = document.querySelector('.category .category__list-wrap .slick-prev')
+//         const arrowNext = document.querySelector('.category .category__list-wrap .slick-next')
+        
+//         const categoryList = document.querySelectorAll('.category .category__list-wrap .category__item')
+
+//         let i = 0;
+
+//         arrowNext.addEventListener('click', () => {
+//             console.log(i, 'hi')
+            
+//             if( i >= 0){
+//                 i++;
+//                 arrowNext.classList.add('arrow__active')
+//                 arrowPrev.classList.add('arrow__active')
+//             }
+//             if( i >= 4){
+//                 i = 4;
+//                 arrowPrev.classList.add('arrow__active')
+//                 arrowNext.classList.remove('arrow__active')
+//             }
+//         })   
+
+//         arrowPrev.addEventListener('click', () => {
+//             console.log(i)
+
+//             if( i <= 4){
+//                 i--;
+//                 // arrowPrev.classList.add('arrow__active')
+//                 arrowNext.classList.add('arrow__active')
+//             }
+//             if( i <= 0){
+//                 i = 0;
+//                 arrowNext.classList.add('arrow__active')
+//                 arrowPrev.classList.remove('arrow__active')
+//             }
+//         })  
+        
+//     }
+//     arrowButton()
+// })

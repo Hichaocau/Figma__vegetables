@@ -4,8 +4,9 @@ $(document).ready(function(){
         slidesToScroll: 1,
         dots: false,
         infinite: false,
+        arrows: true,
         prevArrow: `<button type='button' class='slick-prev slick-arrow'><i class="fa-solid fa-chevron-left"></i></button>`,
-        nextArrow: `<button type='button' class='slick-next slick-arrow'><i class="fa-solid fa-chevron-right"></i></button>`,
+        nextArrow: `<button type='button' class='slick-next slick-arrow arrow__active'><i class="fa-solid fa-chevron-right"></i></button>`,
         responsive: [
           {
             breakpoint: 1024,

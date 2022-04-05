@@ -108,7 +108,6 @@ button{
     font-family: 'Manrope', sans-serif;
     cursor: pointer;
     transition: all 0.2s linear;
-
 }
 
 .transition{
@@ -165,9 +164,14 @@ ul{
 }
 
 
-.slick-arrow:hover{
+/* .slick-arrow:hover{
+    background-color: #22C55E;
+} */
+
+.arrow__active{
     background-color: #22C55E;
 }
+
 
 .slick-prev{
     right: 60px;

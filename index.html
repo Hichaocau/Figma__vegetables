@@ -28,44 +28,21 @@
                         <a href="#">Czar Shop</a>
                         <img src="./assets/imgs/icon-logo.svg" alt="">
                     </div>
-                    <ul class="header__list header__list-pc df hide-on-tablet hide-on-mobile">
-                        <li class="header__item df df__flex">
-                            <div class="header__item-home df">
-                                <a class="text header__item-active" href="#">Home</a>
-                                <img src="./assets/imgs/arrow-down.svg" alt="">
-                                <div class="header__item-navbar">
-                                    <a class="text" href="#save">Save up</a>
-                                    <a class="text" href="#category">Category</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="header__item df">
-                            <a class="text" href="#shop">Shop</a>
-                        </li>
-                        <li class="header__item df">
-                            <a class="text" href="#blog">Blog</a>
-                        </li>
-                        <li class="header__item df">
-                            <a class="text" href="#page">Page</a>
-                        </li>
-                        <li class="header__item df">
-                            <a class="text" href="#vendor">Vendor</a>
-                        </li>
-                    </ul>
-                    <div class="header__menu hide-on-pc ">
-                        <i class="fa-solid fa-bars"></i>
-                    </div>
-                    <div class="header__navbar hide-on-pc ">
-                        <ul class="header__list">
+                    <div class="header__list-btn df">
+                        <ul class="header__list header__list-pc df">
                             <li class="header__item df df__flex">
-                                <div class="header__item-home">
-                                    <div class="header__navbar-home df">
-                                        <a class="text header__item-active" href="#">Home</a>
-                                        <img src="./assets/imgs/arrow-down.svg" alt="">
-                                    </div>
+                                <div class="header__item-home df">
+                                    <a class="text header__item-active" href="#">Home</a>
+                                    <img src="./assets/imgs/arrow-down.svg" alt="">
                                     <div class="header__item-navbar">
-                                        <a class="text" href="#save">Save up</a>
-                                        <a class="text" href="#category">Category</a>
+                                        <ul class="header__item-navbar--list">
+                                            <li class="header__item-navbar--item">
+                                                <a class="text" href="#save">Save up</a>
+                                            </li>
+                                            <li class="header__item-navbar--item">
+                                                <a class="text" href="#category">Category</a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </li>
@@ -82,10 +59,13 @@
                                 <a class="text" href="#vendor">Vendor</a>
                             </li>
                         </ul>
+                        <div class="header__btn df">
+                            <button class="header__btn-first btn">Login</button>
+                            <button class="header__btn-second btn">Sign Up</button>
+                        </div>
                     </div>
-                    <div class="header__btn df">
-                        <button class="header__btn-first btn">Login</button>
-                        <button class="header__btn-second btn">Sign Up</button>
+                    <div class="header__menu hide-on-pc ">
+                        <i class="fa-solid fa-bars"></i>
                     </div>
                 </div>
             </div>
@@ -114,9 +94,9 @@
                 <h2 class="text__header">Search by Category</h2>
             </div>
             <div class="category__list-wrap bd">
-                <div class="row category__list-slider">
+                <div class="row category__list-slider mb60">
                     <div class="col l-3 m-3 c-6">
-                        <div class="category__item">
+                        <div class="category__item mb40">
                             <div class="category__item-img">
                                 <img src="./assets/imgs/cate1.png" alt="">
                             </div>
@@ -124,7 +104,7 @@
                         </div>
                     </div>
                     <div class="col l-3 m-3 c-6">
-                        <div class="category__item">
+                        <div class="category__item mb40">
                             <div class="category__item-img">
                                 <img src="./assets/imgs/cate2.png" alt="">
                             </div>
@@ -132,7 +112,7 @@
                         </div>
                     </div>
                     <div class="col l-3 m-3 c-6">
-                        <div class="category__item">
+                        <div class="category__item mb40">
                             <div class="category__item-img">
                                 <img src="./assets/imgs/cate3.png" alt="">
                             </div>
@@ -140,7 +120,7 @@
                         </div>
                     </div>
                     <div class="col l-3 m-3 c-6">
-                        <div class="category__item">
+                        <div class="category__item mb40">
                             <div class="category__item-img">
                                 <img src="./assets/imgs/cate4.png" alt="">
                             </div>
@@ -148,7 +128,7 @@
                         </div>
                     </div>
                     <div class="col l-3 m-3 c-6">
-                        <div class="category__item">
+                        <div class="category__item mb40">
                             <div class="category__item-img">
                                 <img src="./assets/imgs/cate3.png" alt="">
                             </div>
@@ -156,7 +136,7 @@
                         </div>
                     </div>
                     <div class="col l-3 m-3 c-6">
-                        <div class="category__item">
+                        <div class="category__item mb40">
                             <div class="category__item-img">
                                 <img src="./assets/imgs/cate1.png" alt="">
                             </div>
@@ -164,7 +144,7 @@
                         </div>
                     </div>
                     <div class="col l-3 m-3 c-6">
-                        <div class="category__item">
+                        <div class="category__item mb40">
                             <div class="category__item-img">
                                 <img src="./assets/imgs/cate2.png" alt="">
                             </div>
@@ -172,7 +152,7 @@
                         </div>
                     </div>
                     <div class="col l-3 m-3 c-6">
-                        <div class="category__item">
+                        <div class="category__item mb40">
                             <div class="category__item-img">
                                 <img src="./assets/imgs/cate4.png" alt="">
                             </div>
@@ -541,8 +521,8 @@
 
         <!-- sale section start -->
         <div class="sale container__full" id="page">
-            <div class="sale__info-wrap ">
-                <div class="sale__info">
+            <div class="sale__info-wrap container">
+                <div class="sale__info ">
                     <p class="sale__info-header">
                         Save 
                         <span>40%</span> 
@@ -1167,7 +1147,7 @@
 
         <!-- delivery section start -->
         <div class="delivery container__full" id="vendor">
-            <div class="delivery__info-wrap">
+            <div class="delivery__info-wrap container">
                 <div class="delivery__info">
                     <h2 class="delivery__info-header">Free Home</h2>
                     <h2 class="delivery__info-header">Delivery in 24h</h2>
