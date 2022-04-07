@@ -146,8 +146,16 @@
         padding: 30px 30px;
         background-color: #EBECFE;
         width: 280px;
+    }
+
+    .translate0{
+        transform: translateX(0);
+    }
+
+    .translate100{
         transform: translateX(100%);
     }
+
     .header__list{
         display: inline;
     }

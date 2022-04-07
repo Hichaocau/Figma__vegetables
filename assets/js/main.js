@@ -142,44 +142,20 @@ function headerMenu(){
     const iconMenu = document.querySelector('.header__menu i')
     const navbar = document.querySelector('.header__list-btn')
     const overlay = document.querySelector('.overlay')
-
-
-    // iconMenu.addEventListener('click', () => {
-
-    //     if(window.innerWidth <= 1030){
-    //         iconMenu.classList.toggle('fa-xmark')
-    //         overlay.classList.toggle('none')
-    //         navbar.style.transform = 'translateX(0)'
-    //         navbar.style.transition = 'all 0.3s linear'
-    //     }
-    //     else{
-    //         navbar.style.transform = 'translateX(100%)'
-    //     }
-    // })
-
-    // overlay.addEventListener('click', () => {
-
-    //     if(window.innerWidth <= 1030){
-    //         iconMenu.classList.toggle('fa-xmark')
-    //         overlay.classList.toggle('none')
-    //         navbar.style.transform = 'translateX(100%)'
-    //     }
-    //     else{
-    //         navbar.style.transform = 'translateX(0)'
-    //     }
-    // })
     
     iconMenu.addEventListener('click', () => {
         iconMenu.classList.toggle('fa-xmark')
         overlay.classList.toggle('none')
-        navbar.style.transform = 'translateX(0)'
         navbar.style.transition = 'all 0.3s linear'
+        navbar.classList.remove('translate100')
+        navbar.classList.add('translate0')
     })
 
     overlay.addEventListener('click', () => {
         iconMenu.classList.toggle('fa-xmark')
         overlay.classList.toggle('none')
-        navbar.style.transform = 'translateX(100%)'
+        navbar.classList.add('translate100')
+        navbar.classList.remove('translate0')
     })
 }
 headerMenu()
