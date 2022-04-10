@@ -1,13 +1,3 @@
-.grid {
-    width: 100%;
-    display: block;
-    padding: 0;
-}
-
-.grid.wide {
-    max-width: 1170px;
-    margin: 0 auto;
-}
 
 .row {
     display: flex;
